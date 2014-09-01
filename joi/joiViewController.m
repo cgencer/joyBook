@@ -14,7 +14,7 @@
 
 @interface joiViewController () <DMLazyScrollViewDelegate> {
     DMLazyScrollView* lazyScrollView;
-    NSMutableArray*    viewControllerArray;
+    NSMutableArray* viewControllerArray;
 }
 @end
 
@@ -26,6 +26,7 @@
     // PREPARE PAGES
     NSUInteger numberOfPages = 10;
     viewControllerArray = [[NSMutableArray alloc] initWithCapacity:numberOfPages];
+
     for (NSUInteger k = 0; k < numberOfPages; ++k) {
         [viewControllerArray addObject:[NSNull null]];
     }
@@ -43,19 +44,41 @@
     lazyScrollView.numberOfPages = numberOfPages;
 	// lazyScrollView.controlDelegate = self;
     [self.view addSubview:lazyScrollView];
+
+    UIImage *background = [UIImage imageNamed: @"back.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
+	
+    [self.view addSubview: imageView];
     
     // MOVE BY 3 FORWARD
     UIButton*btn_moveForward = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 //    [btn_moveForward setTitle:@"MOVE BY 3" forState:UIControlStateNormal];
     [btn_moveForward addTarget:self action:@selector(btn_moveForward:) forControlEvents:UIControlEventTouchUpInside];
-    [btn_moveForward setFrame:CGRectMake(self.view.frame.size.width/2.0f,lazyScrollView.frame.origin.y+lazyScrollView.frame.size.height+5, 320/2.0f,40)];
+/*    [btn_moveForward setFrame:CGRectMake(self.view.frame.size.width / 2.0f,
+	                   					 lazyScrollView.frame.origin.y + lazyScrollView.frame.size.height + 5,
+										 320 / 2.0f, 40)];
+*/
+    [btn_moveForward setFrame:CGRectMake(self.view.frame.size.width - (self.view.frame.size.width / 16 * 2),
+                                        (self.view.frame.size.height / 4) * 2 - (self.view.frame.size.height / 8),
+                                        self.view.frame.size.width / 16, 
+                                        self.view.frame.size.height / 4)];
     [self.view addSubview:btn_moveForward];
     
     // MOVE BY -3 BACKWARD
     UIButton*btn_moveBackward = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 //    [btn_moveBackward setTitle:@"MOVE BY -3" forState:UIControlStateNormal];
     [btn_moveBackward addTarget:self action:@selector(btn_moveBack:) forControlEvents:UIControlEventTouchUpInside];
-    [btn_moveBackward setFrame:CGRectMake(0,lazyScrollView.frame.origin.y+lazyScrollView.frame.size.height+5, 320/2.0f,40)];
+/*    [btn_moveBackward setFrame:CGRectMake(0,
+										  lazyScrollView.frame.origin.y + lazyScrollView.frame.size.height + 5,
+										  320/2.0f, 40)];
+*/
+    [btn_moveBackward setFrame:CGRectMake((self.view.frame.size.width / 16 * 2),
+                                        (self.view.frame.size.height / 4) * 2 - (self.view.frame.size.height / 8),
+                                        self.view.frame.size.width / 16, 
+                                        self.view.frame.size.height / 4)];
+    [btn_moveBackward setFrame:CGRectMake(0,
+                                          lazyScrollView.frame.origin.y + lazyScrollView.frame.size.height + 5,
+                                          320/2.0f, 40)];
     [self.view addSubview:btn_moveBackward];
 	// Do any additional setup after loading the view, typically from a nib.
 }
