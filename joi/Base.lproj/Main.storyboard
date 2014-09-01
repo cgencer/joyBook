@@ -1,25 +1,154 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Joi View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="joiViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="73" y="-204"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wse-F7-ZZ1">
+            <objects>
+                <navigationController storyboardIdentifier="Top1" definesPresentationContext="YES" id="Abt-oX-NWo" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xjn-bb-QGH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oOB-KT-ifk" kind="relationship" relationship="rootViewController" id="Pdx-dS-QZ5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aK3-VV-z9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="-1193"/>
+        </scene>
+        <!--View Controller - 1-->
+        <scene sceneID="EUt-IZ-bzz">
+            <objects>
+                <viewController id="oOB-KT-ifk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S6V-On-tED">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="1" id="CeF-DI-3H9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3z-t2-y0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2563" y="-1193"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cfk-vJ-cN8">
+            <objects>
+                <navigationController storyboardIdentifier="Top2" definesPresentationContext="YES" id="Xty-vw-mxc" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B6k-Lg-Lcp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9qN-Lm-xxM" kind="relationship" relationship="rootViewController" id="IAe-7e-C2B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cdc-6F-mIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="-289"/>
+        </scene>
+        <!--View Controller - 2-->
+        <scene sceneID="hXs-MI-tho">
+            <objects>
+                <viewController id="9qN-Lm-xxM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gzD-ti-Jjt">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="2" id="TRe-Ce-JWv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlu-Os-AfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2563" y="-289"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fHG-Db-cv9">
+            <objects>
+                <navigationController storyboardIdentifier="Top3" definesPresentationContext="YES" id="84F-Ce-6JD" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Nv-5b-cIS">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="N2N-0P-kNI" kind="relationship" relationship="rootViewController" id="vNG-qu-aGD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxr-aV-bN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="637"/>
+        </scene>
+        <!--View Controller - 3-->
+        <scene sceneID="Xv5-6O-Ccd">
+            <objects>
+                <viewController id="N2N-0P-kNI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M7e-5R-mre">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="3" id="WR3-Kb-c4z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMH-OP-uMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2563" y="637"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CWB-Un-Kyo">
+            <objects>
+                <navigationController storyboardIdentifier="Top4" automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" id="sB7-gy-s2E" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8rV-GI-Qpw">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="X7M-Mh-NOO" kind="relationship" relationship="rootViewController" id="u4o-DD-bp0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BPJ-gn-xAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="1565"/>
+        </scene>
+        <!--View Controller - 4-->
+        <scene sceneID="UHk-h2-vGl">
+            <objects>
+                <viewController id="X7M-Mh-NOO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YnA-wz-SsB">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="4" id="oe4-0q-lid"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdk-lk-gFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2563" y="1565"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
