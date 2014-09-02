@@ -1,0 +1,66 @@
+{
+	"bookset": {
+		"title": "",
+		"back": [
+			{
+				"location": {
+				   "x": 0,
+				   "y": 0
+				},
+				"interval": 25,
+				"frames": [
+					{
+						"image": "bulut1.png"
+					}, {
+						"image": "bulut2.png"
+					}, {
+						"image": "bulut3.png"
+					}, {
+						"image": "bulut4.png"
+					}, {
+						"image": "bulut5.png"
+					}
+				]
+			}
+		],
+		"stage": "stage.png",
+		"audio": "",
+		"actions": [
+			{
+				"type": "TOUCH",
+				"tween": "LINEAR",
+				"starttime": 4500,
+				"startpos": {
+					"x": 100,
+					"y": 50
+				},
+				"endpos": {
+					"x": 100,
+					"y": 50
+				},
+				"frames": [
+					{
+						"image": "kelle1.png",
+						"pause": 12
+					}, {
+						"image": "kelle2.png",
+						"pause": 12
+					}, {
+						"image": "kelle3.png",
+						"pause": 20
+					}, {
+						"image": "kelle4.png",
+						"pause": 20
+					}, {
+						"image": "kelle5.png",
+						"pause": 12
+					}, {
+						"image": "kelle6.png",
+						"pause": 12
+					}
+				],
+				"audio": "ses.caf"
+			}
+		]
+	}
+}
