@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Cem Gencer. All rights reserved.
 //
 
-#import "joiBookset.h"
+#import "joiCollection.h"
 
-@implementation joiBookset
+@implementation joiCollection
 
 @end

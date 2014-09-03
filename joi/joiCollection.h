@@ -9,8 +9,8 @@
 #import "JSONModel.h"
 #import "joiBook.h"
 
-@interface joiBookset : JSONModel
+@interface joiCollection : JSONModel
 
-@property (strong, nonatomic) NSArray<joiBook, ConvertOnDemand>* bookset;
+@property (strong, nonatomic) NSArray<joiBook, ConvertOnDemand>* bookSet;
 
 @end

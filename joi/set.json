@@ -1,6 +1,6 @@
 {
-	"bookset": [{
-		"title": "",
+	"bookSet": [{
+		"title": "test ismi",
 		"stage": "stage.png",
 		"audio": "",
 		"back": [

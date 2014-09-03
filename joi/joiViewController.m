@@ -9,7 +9,7 @@
 #import "joiViewController.h"
 #import "DMLazyScrollView.h"
 #import "JSONModelLib.h"
-#import "joiBookset.h"
+#import "joiCollection.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 #define ARC4RANDOM_MAX	0x100000000
@@ -20,6 +20,9 @@
 	NSMutableArray* viewControllerArray;
     NSArray *_locations;
 	NSData *data;
+	joiCollection* _bookSet;
+	joiBook* theBook;
+	
 //	@property (nonatomic, strong) STTwitterAPI *twitter;
 }
 @end
@@ -31,20 +34,30 @@
 
 	NSString* setPath = [[NSBundle mainBundle] pathForResource:@"set" ofType:@"json"];
 	NSError* err = nil;
-	NSString* json = [NSString stringWithContentsOfFile:setPath
-									 		   encoding:NSUTF8StringEncoding
-                                                  error:&err];
+	// NSString* json = [NSString stringWithContentsOfFile:setPath
+	// 								 		   encoding:NSUTF8StringEncoding
+ //                                                  error:&err];
+
+	NSString *jsonString = [NSString stringWithContentsOfFile:setPath 
+													 encoding:NSUTF8StringEncoding 
+													    error:&err];
+	NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+
+	NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData
+																 options:NSJSONReadingMutableContainers 
+																   error:&err];
+
+	_bookSet = [[joiCollection alloc] initWithDictionary:jsonDict error:&err];
 	if(err) {
-		NSLog(@"ERROR while loading from file: %@", err);
+		NSLog(@"ERROR while initialising the bookset: %@", _bookSet);
 	}
 
-	err = nil;
-	joiBookset* theBook = [[joiBookset alloc] initWithString:json error:&err];
-	if(err) {
-		NSLog(@"ERROR while initialising the bookset: %@", err);
-	}
+	NSArray* book = _bookSet.bookSet;
+	theBook = [book objectAtIndex:0];
 
-	NSLog(@"testing: %@", json);
+	
+	
+	NSLog(@"testing: %@", theBook.title);
 
 
 //	_consumerKeyTextField.text = @"PdLBPYUXlhQpt4AguShUIw";
