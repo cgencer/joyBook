@@ -11,6 +11,6 @@
 
 @interface joiBookset : JSONModel
 
-@property (strong, nonatomic) NSArray<joiBook>* bookset;
+@property (strong, nonatomic) NSArray<joiBook, ConvertOnDemand>* bookset;
 
 @end

@@ -10,6 +10,11 @@
 
 @interface joiViewController : UIViewController
 
+@property (nonatomic, strong) NSArray *statuses;
+
+@property (nonatomic, weak) IBOutlet UITextField *consumerKeyTextField;
+@property (nonatomic, weak) IBOutlet UITextField *consumerSecretTextField;
+
 - (IBAction)loginWithiOSAction:(id)sender;
 - (IBAction)loginInSafariAction:(id)sender;
 - (IBAction)getTimelineAction:(id)sender;

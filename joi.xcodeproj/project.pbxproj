@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		140C598619B662BF00170ED3 /* joiBookset.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C598519B662BF00170ED3 /* joiBookset.m */; };
+		140C598919B6FEB200170ED3 /* joiLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C598819B6FEB200170ED3 /* joiLocation.m */; };
+		140C598C19B6FEF100170ED3 /* joiFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C598B19B6FEF100170ED3 /* joiFrame.m */; };
 		140E4C1419B45AEF00E2ED4E /* DMLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */; };
 		140E4C1619B45C5E00E2ED4E /* DMViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 140E4C1519B45C5E00E2ED4E /* DMViewController_iPad.xib */; };
 		140E4C1A19B47E5A00E2ED4E /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 140E4C1919B47E5A00E2ED4E /* back.png */; };
@@ -36,6 +38,10 @@
 /* Begin PBXFileReference section */
 		140C598419B662BF00170ED3 /* joiBookset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiBookset.h; sourceTree = "<group>"; };
 		140C598519B662BF00170ED3 /* joiBookset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiBookset.m; sourceTree = "<group>"; };
+		140C598719B6FEB200170ED3 /* joiLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiLocation.h; sourceTree = "<group>"; };
+		140C598819B6FEB200170ED3 /* joiLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiLocation.m; sourceTree = "<group>"; };
+		140C598A19B6FEF100170ED3 /* joiFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiFrame.h; sourceTree = "<group>"; };
+		140C598B19B6FEF100170ED3 /* joiFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiFrame.m; sourceTree = "<group>"; };
 		140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLazyScrollView.m; sourceTree = "<group>"; };
 		140E4C1319B45AEF00E2ED4E /* DMLazyScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLazyScrollView.h; sourceTree = "<group>"; };
 		140E4C1519B45C5E00E2ED4E /* DMViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMViewController_iPad.xib; sourceTree = "<group>"; };
@@ -112,6 +118,10 @@
 				14AF045B19B5ED3E005B9495 /* joiAnim.h */,
 				14AF045C19B5ED3E005B9495 /* joiAnim.m */,
 				14AF045019B5DC04005B9495 /* set.json */,
+				140C598719B6FEB200170ED3 /* joiLocation.h */,
+				140C598819B6FEB200170ED3 /* joiLocation.m */,
+				140C598A19B6FEF100170ED3 /* joiFrame.h */,
+				140C598B19B6FEF100170ED3 /* joiFrame.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -322,6 +332,8 @@
 				140C598619B662BF00170ED3 /* joiBookset.m in Sources */,
 				14B6916F19AB62D600C8B6E0 /* joiViewController.m in Sources */,
 				14AF045D19B5ED3E005B9495 /* joiAnim.m in Sources */,
+				140C598C19B6FEF100170ED3 /* joiFrame.m in Sources */,
+				140C598919B6FEB200170ED3 /* joiLocation.m in Sources */,
 				14AF045A19B5EC8C005B9495 /* joiBook.m in Sources */,
 				140E4C1419B45AEF00E2ED4E /* DMLazyScrollView.m in Sources */,
 				14B6916519AB62D600C8B6E0 /* main.m in Sources */,

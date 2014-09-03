@@ -16,7 +16,7 @@
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *stage;
 @property (strong, nonatomic) NSString<Optional>* audio;
-@property (strong, nonatomic) NSArray<joiAnim>* back;
-@property (strong, nonatomic) NSArray<joiAnim>* actions;
+@property (strong, nonatomic) NSArray<joiAnim, ConvertOnDemand>* back;
+@property (strong, nonatomic) NSArray<joiAnim, ConvertOnDemand>* actions;
 
 @end

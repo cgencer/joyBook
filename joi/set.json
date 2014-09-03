@@ -1,6 +1,8 @@
 {
-	"bookset": {
+	"bookset": [{
 		"title": "",
+		"stage": "stage.png",
+		"audio": "",
 		"back": [
 			{
 				"location": {
@@ -23,8 +25,6 @@
 				]
 			}
 		],
-		"stage": "stage.png",
-		"audio": "",
 		"actions": [
 			{
 				"type": "TOUCH",
@@ -62,5 +62,5 @@
 				"audio": "ses.caf"
 			}
 		]
-	}
+	}]
 }

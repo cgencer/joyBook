@@ -30,9 +30,19 @@
 	[super viewDidLoad];
 
 	NSString* setPath = [[NSBundle mainBundle] pathForResource:@"set" ofType:@"json"];
-	NSString* json = [NSString stringWithContentsOfFile:setPath];
 	NSError* err = nil;
+	NSString* json = [NSString stringWithContentsOfFile:setPath
+									 		   encoding:NSUTF8StringEncoding
+                                                  error:&err];
+	if(err) {
+		NSLog(@"ERROR while loading from file: %@", err);
+	}
+
+	err = nil;
 	joiBookset* theBook = [[joiBookset alloc] initWithString:json error:&err];
+	if(err) {
+		NSLog(@"ERROR while initialising the bookset: %@", err);
+	}
 
 	NSLog(@"testing: %@", json);
 
