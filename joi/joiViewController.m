@@ -10,6 +10,7 @@
 #import "DMLazyScrollView.h"
 #import "JSONModelLib.h"
 #import "joiCollection.h"
+#import "joiScene.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 #define ARC4RANDOM_MAX	0x100000000
@@ -18,7 +19,7 @@
 @interface joiViewController () <DMLazyScrollViewDelegate> {
 	DMLazyScrollView* lazyScrollView;
 	NSMutableArray* viewControllerArray;
-    NSArray *_locations;
+	NSArray *_locations;
 	NSData *data;
 	joiCollection* _bookSet;
 	joiBook* theBook;
@@ -29,9 +30,33 @@
 
 @implementation joiViewController
 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+	 // Override point for customization after application launch.
+	return YES;
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
+    // Configure the view.
+    SKView * skView = (SKView *)self.view;
+    skView.showsFPS = YES;
+    skView.showsNodeCount = YES;
+    
+    // Create and configure the scene.
+    SKScene * scene = [joiScene sceneWithSize:skView.bounds.size];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+    
+    // Present the scene.
+    [skView presentScene:scene];
+
+	
+	
+	
+	
+	
+	
 	NSString* setPath = [[NSBundle mainBundle] pathForResource:@"set" ofType:@"json"];
 	NSError* err = nil;
 	// NSString* json = [NSString stringWithContentsOfFile:setPath
@@ -40,7 +65,7 @@
 
 	NSString *jsonString = [NSString stringWithContentsOfFile:setPath 
 													 encoding:NSUTF8StringEncoding 
-													    error:&err];
+														error:&err];
 	NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
 
 	NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData
@@ -55,9 +80,13 @@
 	NSArray* book = _bookSet.bookSet;
 	theBook = [book objectAtIndex:0];
 
-	
-	
-	NSLog(@"testing: %@", theBook.title);
+	NSString* path = [[NSString alloc] initWithFormat:@"%@", theBook.stage];
+	NSString* imgPath = [[NSBundle mainBundle] pathForResource:path ofType:@"png"];
+	UIImage* image = [UIImage imageWithContentsOfFile:imgPath];
+	UIImageView *imgView = [[UIImageView alloc] initWithImage:image];
+
+
+	NSLog(@"testing: %@", imgPath);
 
 
 //	_consumerKeyTextField.text = @"PdLBPYUXlhQpt4AguShUIw";
@@ -85,7 +114,9 @@
 	// lazyScrollView.controlDelegate = self;
 	[self.view addSubview:lazyScrollView];
 
-/*
+	[self.view addSubview:imgView];				// put it after the view has been built up!
+
+	/*
 	UIImage *background = [UIImage imageNamed: @"back.png"];
 	UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
 	
@@ -292,5 +323,18 @@
 - (void)lazyScrollViewDidEndDragging:(DMLazyScrollView *)pagingView {
 	NSLog(@"Now visible: %@",lazyScrollView.visibleViewController);
 }
- 
+
+- (BOOL)shouldAutorotate
+{
+	return FALSE;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+		return UIInterfaceOrientationMaskAllButUpsideDown;
+	} else {
+		return UIInterfaceOrientationMaskAll;
+	}
+}
 @end

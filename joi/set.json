@@ -1,26 +1,33 @@
 {
 	"bookSet": [{
 		"title": "test ismi",
-		"stage": "stage.png",
+		"stage": "stage",
 		"audio": "",
-		"back": [
+		"backPic": "back",
+		"backAnim": [
 			{
 				"location": {
 				   "x": 0,
 				   "y": 0
 				},
-				"interval": 25,
+				"type": "LOOP",
+				"tween": "FRAME",
+				"interval": 20,
 				"frames": [
 					{
-						"image": "bulut1.png"
+						"image": "dove1"
 					}, {
-						"image": "bulut2.png"
+						"image": "dove2"
 					}, {
-						"image": "bulut3.png"
+						"image": "dove3"
 					}, {
-						"image": "bulut4.png"
+						"image": "dove4"
 					}, {
-						"image": "bulut5.png"
+						"image": "dove5"
+					}, {
+						"image": "dove6"
+					}, {
+						"image": "dove7"
 					}
 				]
 			}

@@ -10,9 +10,13 @@
 		140C598919B6FEB200170ED3 /* joiLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C598819B6FEB200170ED3 /* joiLocation.m */; };
 		140C598C19B6FEF100170ED3 /* joiFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C598B19B6FEF100170ED3 /* joiFrame.m */; };
 		140C598F19B70E9E00170ED3 /* joiCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C598E19B70E9E00170ED3 /* joiCollection.m */; };
+		140C599419B79E4000170ED3 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 140C599219B79E4000170ED3 /* back.png */; };
+		140C599519B79E4000170ED3 /* stage.png in Resources */ = {isa = PBXBuildFile; fileRef = 140C599319B79E4000170ED3 /* stage.png */; };
+		140C599819B845CD00170ED3 /* joiScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C599719B845CD00170ED3 /* joiScene.m */; };
+		140C599A19B8465200170ED3 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140C599919B8465200170ED3 /* SpriteKit.framework */; };
+		140C599C19B853E500170ED3 /* dove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 140C599B19B853E500170ED3 /* dove.atlas */; };
+		140C59F119B87D5500170ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140C59EF19B87D5500170ED3 /* Main.storyboard */; };
 		140E4C1419B45AEF00E2ED4E /* DMLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */; };
-		140E4C1619B45C5E00E2ED4E /* DMViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 140E4C1519B45C5E00E2ED4E /* DMViewController_iPad.xib */; };
-		140E4C1A19B47E5A00E2ED4E /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 140E4C1919B47E5A00E2ED4E /* back.png */; };
 		14AF044719B51729005B9495 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AF044619B51729005B9495 /* Twitter.framework */; };
 		14AF044819B51743005B9495 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140E4C2119B4FD4C00E2ED4E /* Social.framework */; };
 		14AF044A19B51743005B9495 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AF044919B51743005B9495 /* Security.framework */; };
@@ -42,10 +46,15 @@
 		140C598B19B6FEF100170ED3 /* joiFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiFrame.m; sourceTree = "<group>"; };
 		140C598D19B70E9E00170ED3 /* joiCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiCollection.h; sourceTree = "<group>"; };
 		140C598E19B70E9E00170ED3 /* joiCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiCollection.m; sourceTree = "<group>"; };
+		140C599219B79E4000170ED3 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		140C599319B79E4000170ED3 /* stage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stage.png; sourceTree = "<group>"; };
+		140C599619B845CD00170ED3 /* joiScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiScene.h; sourceTree = "<group>"; };
+		140C599719B845CD00170ED3 /* joiScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiScene.m; sourceTree = "<group>"; };
+		140C599919B8465200170ED3 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		140C599B19B853E500170ED3 /* dove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = dove.atlas; sourceTree = "<group>"; };
+		140C59F019B87D5500170ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLazyScrollView.m; sourceTree = "<group>"; };
 		140E4C1319B45AEF00E2ED4E /* DMLazyScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLazyScrollView.h; sourceTree = "<group>"; };
-		140E4C1519B45C5E00E2ED4E /* DMViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMViewController_iPad.xib; sourceTree = "<group>"; };
-		140E4C1919B47E5A00E2ED4E /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		140E4C1B19B4F9C300E2ED4E /* libPods-Facebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Facebook-iOS-SDK.a"; path = "Pods/build/Debug-iphoneos/libPods-Facebook-iOS-SDK.a"; sourceTree = "<group>"; };
 		140E4C1D19B4F9C600E2ED4E /* libPods-Bolts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Bolts.a"; path = "Pods/build/Debug-iphoneos/libPods-Bolts.a"; sourceTree = "<group>"; };
 		140E4C1F19B4FD3700E2ED4E /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -72,7 +81,6 @@
 		14B6916619AB62D600C8B6E0 /* joi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "joi-Prefix.pch"; sourceTree = "<group>"; };
 		14B6916719AB62D600C8B6E0 /* joiAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = joiAppDelegate.h; sourceTree = "<group>"; };
 		14B6916819AB62D600C8B6E0 /* joiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = joiAppDelegate.m; sourceTree = "<group>"; };
-		14B6916B19AB62D600C8B6E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14B6916D19AB62D600C8B6E0 /* joiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = joiViewController.h; sourceTree = "<group>"; };
 		14B6916E19AB62D600C8B6E0 /* joiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = joiViewController.m; sourceTree = "<group>"; };
 		14B6917019AB62D600C8B6E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -90,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140C599A19B8465200170ED3 /* SpriteKit.framework in Frameworks */,
 				14AF045F19B63DBE005B9495 /* SystemConfiguration.framework in Frameworks */,
 				14AF044E19B5175A005B9495 /* Accounts.framework in Frameworks */,
 				14AF044719B51729005B9495 /* Twitter.framework in Frameworks */,
@@ -148,6 +157,7 @@
 		14B6915719AB62D600C8B6E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				140C599919B8465200170ED3 /* SpriteKit.framework */,
 				14AF045E19B63DBE005B9495 /* SystemConfiguration.framework */,
 				14AF044B19B51749005B9495 /* QuartzCore.framework */,
 				14AF044919B51743005B9495 /* Security.framework */,
@@ -175,9 +185,10 @@
 				14AF044F19B5DBCF005B9495 /* model */,
 				14B6916719AB62D600C8B6E0 /* joiAppDelegate.h */,
 				14B6916819AB62D600C8B6E0 /* joiAppDelegate.m */,
-				14B6916A19AB62D600C8B6E0 /* Main.storyboard */,
 				14B6916D19AB62D600C8B6E0 /* joiViewController.h */,
 				14B6916E19AB62D600C8B6E0 /* joiViewController.m */,
+				140C599619B845CD00170ED3 /* joiScene.h */,
+				140C599719B845CD00170ED3 /* joiScene.m */,
 				140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */,
 				140E4C1319B45AEF00E2ED4E /* DMLazyScrollView.h */,
 				14B6917019AB62D600C8B6E0 /* Images.xcassets */,
@@ -189,10 +200,12 @@
 		14B6915F19AB62D600C8B6E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				140E4C1519B45C5E00E2ED4E /* DMViewController_iPad.xib */,
+				140C59EF19B87D5500170ED3 /* Main.storyboard */,
+				140C599B19B853E500170ED3 /* dove.atlas */,
+				140C599219B79E4000170ED3 /* back.png */,
+				140C599319B79E4000170ED3 /* stage.png */,
 				14B6916019AB62D600C8B6E0 /* joi-Info.plist */,
 				14B6916119AB62D600C8B6E0 /* InfoPlist.strings */,
-				140E4C1919B47E5A00E2ED4E /* back.png */,
 				14B6916419AB62D600C8B6E0 /* main.m */,
 				14B6916619AB62D600C8B6E0 /* joi-Prefix.pch */,
 			);
@@ -281,11 +294,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140C59F119B87D5500170ED3 /* Main.storyboard in Resources */,
 				14B6917119AB62D600C8B6E0 /* Images.xcassets in Resources */,
+				140C599C19B853E500170ED3 /* dove.atlas in Resources */,
 				14B6916319AB62D600C8B6E0 /* InfoPlist.strings in Resources */,
-				140E4C1A19B47E5A00E2ED4E /* back.png in Resources */,
+				140C599419B79E4000170ED3 /* back.png in Resources */,
 				14AF045119B5DC04005B9495 /* set.json in Resources */,
-				140E4C1619B45C5E00E2ED4E /* DMViewController_iPad.xib in Resources */,
+				140C599519B79E4000170ED3 /* stage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +347,7 @@
 				14B6916F19AB62D600C8B6E0 /* joiViewController.m in Sources */,
 				14AF045D19B5ED3E005B9495 /* joiAnim.m in Sources */,
 				140C598C19B6FEF100170ED3 /* joiFrame.m in Sources */,
+				140C599819B845CD00170ED3 /* joiScene.m in Sources */,
 				140C598919B6FEB200170ED3 /* joiLocation.m in Sources */,
 				14AF045A19B5EC8C005B9495 /* joiBook.m in Sources */,
 				140E4C1419B45AEF00E2ED4E /* DMLazyScrollView.m in Sources */,
@@ -344,20 +360,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		140C59EF19B87D5500170ED3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				140C59F019B87D5500170ED3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		14B6916119AB62D600C8B6E0 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				14B6916219AB62D600C8B6E0 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		14B6916A19AB62D600C8B6E0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14B6916B19AB62D600C8B6E0 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		14B6918019AB62D600C8B6E0 /* InfoPlist.strings */ = {
@@ -406,6 +422,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -439,6 +456,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -456,11 +474,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "joi/joi-Prefix.pch";
 				INFOPLIST_FILE = "joi/joi-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -477,11 +496,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "joi/joi-Prefix.pch";
 				INFOPLIST_FILE = "joi/joi-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
