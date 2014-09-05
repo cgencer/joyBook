@@ -10,4 +10,9 @@
 
 @interface joiScene : SKScene
 
+@property (nonatomic) CGSize contentSize;
+@property(nonatomic) CGPoint contentOffset;
+
+-(void)setContentScale:(CGFloat)scale;
+
 @end

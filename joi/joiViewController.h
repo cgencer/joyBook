@@ -9,17 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface joiViewController : UIViewController
 
-@property (nonatomic, strong) NSArray *statuses;
-
-@property (nonatomic, weak) IBOutlet UITextField *consumerKeyTextField;
-@property (nonatomic, weak) IBOutlet UITextField *consumerSecretTextField;
-
-- (IBAction)loginWithiOSAction:(id)sender;
-- (IBAction)loginInSafariAction:(id)sender;
-- (IBAction)getTimelineAction:(id)sender;
-
-- (void)setOAuthToken:(NSString *)token oauthVerifier:(NSString *)verfier;
+@interface joiViewController : UIViewController<UIScrollViewDelegate>
 
 @end

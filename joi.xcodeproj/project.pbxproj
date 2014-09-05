@@ -16,6 +16,8 @@
 		140C599A19B8465200170ED3 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140C599919B8465200170ED3 /* SpriteKit.framework */; };
 		140C599C19B853E500170ED3 /* dove.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 140C599B19B853E500170ED3 /* dove.atlas */; };
 		140C59F119B87D5500170ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140C59EF19B87D5500170ED3 /* Main.storyboard */; };
+		140C59F719B9944800170ED3 /* joiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C59F619B9944800170ED3 /* joiModel.m */; };
+		140C59FA19B9B3D800170ED3 /* joiSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C59F919B9B3D800170ED3 /* joiSocial.m */; };
 		140E4C1419B45AEF00E2ED4E /* DMLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */; };
 		14AF044719B51729005B9495 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AF044619B51729005B9495 /* Twitter.framework */; };
 		14AF044819B51743005B9495 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140E4C2119B4FD4C00E2ED4E /* Social.framework */; };
@@ -53,6 +55,10 @@
 		140C599919B8465200170ED3 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		140C599B19B853E500170ED3 /* dove.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = dove.atlas; sourceTree = "<group>"; };
 		140C59F019B87D5500170ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		140C59F519B9944800170ED3 /* joiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiModel.h; sourceTree = "<group>"; };
+		140C59F619B9944800170ED3 /* joiModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiModel.m; sourceTree = "<group>"; };
+		140C59F819B9B3D800170ED3 /* joiSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiSocial.h; sourceTree = "<group>"; };
+		140C59F919B9B3D800170ED3 /* joiSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiSocial.m; sourceTree = "<group>"; };
 		140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLazyScrollView.m; sourceTree = "<group>"; };
 		140E4C1319B45AEF00E2ED4E /* DMLazyScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLazyScrollView.h; sourceTree = "<group>"; };
 		140E4C1B19B4F9C300E2ED4E /* libPods-Facebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Facebook-iOS-SDK.a"; path = "Pods/build/Debug-iphoneos/libPods-Facebook-iOS-SDK.a"; sourceTree = "<group>"; };
@@ -120,6 +126,8 @@
 		14AF044F19B5DBCF005B9495 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				140C59F519B9944800170ED3 /* joiModel.h */,
+				140C59F619B9944800170ED3 /* joiModel.m */,
 				140C598D19B70E9E00170ED3 /* joiCollection.h */,
 				140C598E19B70E9E00170ED3 /* joiCollection.m */,
 				14AF045819B5EC8C005B9495 /* joiBook.h */,
@@ -131,6 +139,8 @@
 				140C598819B6FEB200170ED3 /* joiLocation.m */,
 				140C598A19B6FEF100170ED3 /* joiFrame.h */,
 				140C598B19B6FEF100170ED3 /* joiFrame.m */,
+				140C59F819B9B3D800170ED3 /* joiSocial.h */,
+				140C59F919B9B3D800170ED3 /* joiSocial.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -347,6 +357,7 @@
 				14B6916F19AB62D600C8B6E0 /* joiViewController.m in Sources */,
 				14AF045D19B5ED3E005B9495 /* joiAnim.m in Sources */,
 				140C598C19B6FEF100170ED3 /* joiFrame.m in Sources */,
+				140C59FA19B9B3D800170ED3 /* joiSocial.m in Sources */,
 				140C599819B845CD00170ED3 /* joiScene.m in Sources */,
 				140C598919B6FEB200170ED3 /* joiLocation.m in Sources */,
 				14AF045A19B5EC8C005B9495 /* joiBook.m in Sources */,
@@ -354,6 +365,7 @@
 				14B6916519AB62D600C8B6E0 /* main.m in Sources */,
 				14B6916919AB62D600C8B6E0 /* joiAppDelegate.m in Sources */,
 				140C598F19B70E9E00170ED3 /* joiCollection.m in Sources */,
+				140C59F719B9944800170ED3 /* joiModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
