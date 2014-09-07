@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-JSONModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-STTwitter.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2D64220DA23F4AD9B7E90F8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6F9B960FF98E479296BA6CF8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9CE7E64DDF72473C8D2919A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AC73C6A33BEC46F9B59809DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BC92ADE0753543749CCE4728</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

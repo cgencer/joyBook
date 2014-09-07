@@ -1,0 +1,6 @@
+platform :ios, '6.0'
+workspace 'joi.xcworkspace'
+xcodeproj 'joi.xcodeproj'
+pod 'Facebook-iOS-SDK'
+pod 'STTwitter'
+pod 'JSONModel'

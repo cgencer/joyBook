@@ -186,7 +186,7 @@ static NSString * kViewTransformChanged = @"view transform changed";
 		contr.view.backgroundColor = [UIColor colorWithRed: (CGFloat)arc4random()/ARC4RANDOM_MAX
 													 green: (CGFloat)arc4random()/ARC4RANDOM_MAX
 													  blue: (CGFloat)arc4random()/ARC4RANDOM_MAX
-													 alpha: 1.0f];
+													 alpha: 0.4f];
 		
 		UILabel* label = [[UILabel alloc] initWithFrame:contr.view.bounds];
 		label.backgroundColor = [UIColor clearColor];
