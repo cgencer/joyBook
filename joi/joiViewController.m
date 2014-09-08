@@ -23,7 +23,7 @@ static NSString * kViewTransformChanged = @"view transform changed";
 	NSData *data;
 //	BOOL *didPresentScene;
 	joiCollection* _bookSet;
-	joiBook* theBook;
+	joiModel* theModel;
 }
 @property(nonatomic, weak)joiScene *scene;
 @property(nonatomic, weak)UIView *clearContentView;
@@ -50,10 +50,13 @@ static NSString * kViewTransformChanged = @"view transform changed";
 		scene.scaleMode = SKSceneScaleModeAspectFill;
 // Present the scene.
 		[skView presentScene:scene];
+		NSLog(@"scene built up...");
+
 	    CGSize contentSize = skView.frame.size;
 //		[scene setContentSize:contentSize];
 
 // PREPARE PAGES
+/*		
 			NSUInteger numberOfPages = 10;
 			viewControllerArray = [[NSMutableArray alloc] initWithCapacity:numberOfPages];
 	
@@ -75,7 +78,7 @@ static NSString * kViewTransformChanged = @"view transform changed";
 			bookPagesScrollView.controlDelegate = self;
 
 			[skView addSubview:bookPagesScrollView];
-
+*/
 	}
 
 }
@@ -83,52 +86,18 @@ static NSString * kViewTransformChanged = @"view transform changed";
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	joiModel *theModel = [[joiModel alloc] init];
-	joiBook* _book = [theModel selectBook:0];
-
-	NSString* path = [[NSString alloc] initWithFormat:@"%@", _book.stage];
-	NSString* imgPath = [[NSBundle mainBundle] pathForResource:path ofType:@"png"];
-//	UIImage* image = [UIImage imageWithContentsOfFile:imgPath];
-//	UIImageView *imgView = [[UIImageView alloc] initWithImage:image];
-
-	NSLog(@"testing: %@", imgPath);
-
-
-
-
-
-
-/*
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:skView.frame];
-    [scrollView setContentSize:contentSize];
-
-    scrollView.delegate = self;
-    [scrollView setMinimumZoomScale:1.0];
-    [scrollView setMaximumZoomScale:3.0];
-    [scrollView setIndicatorStyle:UIScrollViewIndicatorStyleWhite];
-  
-    UIView *clearContentView = [[UIView alloc] initWithFrame:(CGRect){.origin = CGPointZero, .size = contentSize}];
-    [clearContentView setBackgroundColor:[UIColor clearColor]];
-    [scrollView addSubview:clearContentView];
-
-    _clearContentView = clearContentView;
-
-    [clearContentView addObserver:self
-                       forKeyPath:@"transform"
-                          options:NSKeyValueObservingOptionNew
-                          context:&kViewTransformChanged];
- */
-
-	
-	
-	
-
-
-
-
+	theModel = [[joiModel alloc] init];
+	NSLog(@"...%@", [theModel bookProperty:@"stage"]);
 
 
 	
+
+
+
+
+
+
+/*	
 	// MOVE NEXT
 	UIButton*btn_moveForward = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 //    [btn_moveForward setTitle:@"MOVE BY +" forState:UIControlStateNormal];
@@ -151,6 +120,7 @@ static NSString * kViewTransformChanged = @"view transform changed";
 										  bookPagesScrollView.frame.origin.y + bookPagesScrollView.frame.size.height + 5,
 										  320/2.0f, 40)];
 	[self.view addSubview:btn_moveBackward];
+*/
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

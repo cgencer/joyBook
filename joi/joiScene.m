@@ -9,28 +9,10 @@
 #import <AVFoundation/AVFoundation.h>
 #import "joiScene.h"
 
-typedef NS_ENUM(NSInteger, IIMySceneZPosition)
-{
-    kIIMySceneZPositionScrolling = 0,
-    kIIMySceneZPositionVerticalAndHorizontalScrolling,
-    kIIMySceneZPositionStatic,
-};
-
 @interface joiScene () {
 	SKSpriteNode *_dove;
 	NSArray *_frames;
 }
-//kIIMySceneZPositionScrolling
-@property (nonatomic, weak) SKSpriteNode *spriteToScroll;
-@property (nonatomic, weak) SKSpriteNode *spriteForScrollingGeometry;
-
-//kIIMySceneZPositionStatic
-@property (nonatomic, weak) SKSpriteNode *spriteForStaticGeometry;
-
-//kIIMySceneZPositionVerticalAndHorizontalScrolling
-@property (nonatomic, weak) SKSpriteNode *spriteToHostHorizontalAndVerticalScrolling;
-@property (nonatomic, weak) SKSpriteNode *spriteForHorizontalScrolling;
-@property (nonatomic, weak) SKSpriteNode *spriteForVerticalScrolling;
 @end
 
 @implementation joiScene
@@ -93,42 +75,6 @@ typedef NS_ENUM(NSInteger, IIMySceneZPosition)
 
 -(void)setContentScale:(CGFloat)scale;
 {
-    [self.spriteToScroll setScale:scale];
-    [self updateConstrainedScrollerSize];
-}
-
--(void)updateConstrainedScrollerSize
-{
-
-    CGSize contentSize = [self contentSize];
-    CGSize verticalSpriteSize = [self.spriteForVerticalScrolling size];
-    verticalSpriteSize.height = contentSize.height;
-    [self.spriteForVerticalScrolling setSize:verticalSpriteSize];
-
-    CGSize horizontalSpriteSize = [self.spriteForHorizontalScrolling size];
-    horizontalSpriteSize.width = contentSize.width;
-    [self.spriteForHorizontalScrolling setSize:horizontalSpriteSize];
-
-    CGFloat xScale = [self.spriteToScroll xScale];
-    CGFloat yScale = [self.spriteToScroll yScale];
-    [self.spriteForVerticalScrolling setYScale:yScale];
-    [self.spriteForVerticalScrolling setXScale:xScale];
-    [self.spriteForHorizontalScrolling setXScale:xScale];
-    [self.spriteForHorizontalScrolling setYScale:yScale];
-    CGFloat xScaleReciprocal = 1.0/xScale;
-    CGFloat yScaleReciprocal = 1/yScale;
-    for (SKNode *node in [self.spriteForVerticalScrolling children])
-    {
-        [node setXScale:xScaleReciprocal];
-        [node setYScale:yScaleReciprocal];
-    }
-    for (SKNode *node in [self.spriteForHorizontalScrolling children])
-    {
-        [node setXScale:xScaleReciprocal];
-        [node setYScale:yScaleReciprocal];
-    }
-
-    [self setContentOffset:self.contentOffset];
 }
 
 -(void)update:(CFTimeInterval)currentTime {

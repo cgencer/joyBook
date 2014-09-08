@@ -18,6 +18,7 @@
 		140C59F119B87D5500170ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140C59EF19B87D5500170ED3 /* Main.storyboard */; };
 		140C59F719B9944800170ED3 /* joiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C59F619B9944800170ED3 /* joiModel.m */; };
 		140C59FA19B9B3D800170ED3 /* joiSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C59F919B9B3D800170ED3 /* joiSocial.m */; };
+		140C5A0719BD00C200170ED3 /* joiPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C5A0619BD00C200170ED3 /* joiPage.m */; };
 		140E4C1419B45AEF00E2ED4E /* DMLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */; };
 		14AF044719B51729005B9495 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AF044619B51729005B9495 /* Twitter.framework */; };
 		14AF044819B51743005B9495 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140E4C2119B4FD4C00E2ED4E /* Social.framework */; };
@@ -59,6 +60,8 @@
 		140C59F619B9944800170ED3 /* joiModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiModel.m; sourceTree = "<group>"; };
 		140C59F819B9B3D800170ED3 /* joiSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiSocial.h; sourceTree = "<group>"; };
 		140C59F919B9B3D800170ED3 /* joiSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiSocial.m; sourceTree = "<group>"; };
+		140C5A0519BD00C200170ED3 /* joiPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiPage.h; sourceTree = "<group>"; };
+		140C5A0619BD00C200170ED3 /* joiPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiPage.m; sourceTree = "<group>"; };
 		140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLazyScrollView.m; sourceTree = "<group>"; };
 		140E4C1319B45AEF00E2ED4E /* DMLazyScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLazyScrollView.h; sourceTree = "<group>"; };
 		140E4C1B19B4F9C300E2ED4E /* libPods-Facebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Facebook-iOS-SDK.a"; path = "Pods/build/Debug-iphoneos/libPods-Facebook-iOS-SDK.a"; sourceTree = "<group>"; };
@@ -199,6 +202,8 @@
 				14B6916E19AB62D600C8B6E0 /* joiViewController.m */,
 				140C599619B845CD00170ED3 /* joiScene.h */,
 				140C599719B845CD00170ED3 /* joiScene.m */,
+				140C5A0519BD00C200170ED3 /* joiPage.h */,
+				140C5A0619BD00C200170ED3 /* joiPage.m */,
 				140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */,
 				140E4C1319B45AEF00E2ED4E /* DMLazyScrollView.h */,
 				14B6917019AB62D600C8B6E0 /* Images.xcassets */,
@@ -356,6 +361,7 @@
 			files = (
 				14B6916F19AB62D600C8B6E0 /* joiViewController.m in Sources */,
 				14AF045D19B5ED3E005B9495 /* joiAnim.m in Sources */,
+				140C5A0719BD00C200170ED3 /* joiPage.m in Sources */,
 				140C598C19B6FEF100170ED3 /* joiFrame.m in Sources */,
 				140C59FA19B9B3D800170ED3 /* joiSocial.m in Sources */,
 				140C599819B845CD00170ED3 /* joiScene.m in Sources */,

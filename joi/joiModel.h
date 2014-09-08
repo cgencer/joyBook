@@ -14,6 +14,9 @@
 	joiBook *theBook;
 	joiCollection *_collection;
 }
+
++ (id)sharedManager;
 -(joiBook*)selectBook:(NSInteger *)bookid;
+-(NSString*)bookProperty:(NSString *)selector;
 
 @end

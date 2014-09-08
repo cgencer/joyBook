@@ -10,7 +10,27 @@
 #import "JSONModelLib.h"
 #import "joiCollection.h"
 
+#define defaultBookNum		0
+
 @implementation joiModel
+
+#pragma mark Singleton Methods
+
++ (id)sharedManager {
+	static joiModel *sharedModel = nil;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		sharedModel = [[self alloc] init];
+	});
+	return sharedModel;
+}
+
+-(id)init {
+	if (self = [super init]) {
+		theBook = [self selectBook:defaultBookNum];
+	}
+	return self;
+}
 
 -(joiBook*)selectBook:(NSInteger *)bookid
 {
@@ -36,8 +56,30 @@
 	}
 	
 	NSArray* book = _collection.bookSet;
-	theBook = [book objectAtIndex:0];
-	return theBook;
+	joiBook *_theBook = [book objectAtIndex:0];
+	NSLog(@"book initialized...");
+	return _theBook;
 }
 
+-(NSString*)bookProperty:(NSString *)selector
+{
+	if (theBook == nil) {
+		theBook = [self selectBook:0];
+	}
+
+	NSString* prop = [theBook valueForKey:selector];
+
+	NSString* path = [[NSString alloc] initWithFormat:@"%@", prop];
+	NSString* imgPath = [[NSBundle mainBundle] pathForResource:path ofType:@"png"];
+
+//	UIImage* image = [UIImage imageWithContentsOfFile:imgPath];
+//	UIImageView *imgView = [[UIImageView alloc] initWithImage:image];
+
+	NSLog(@"checking: %@", imgPath);
+	return path;
+}
+
+- (void)dealloc {
+  // Should never be called, but just here for clarity really.
+}
 @end
