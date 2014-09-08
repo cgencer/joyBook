@@ -7,10 +7,20 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "joiModel.h"
 #import "joiBook.h"
 
-@interface joiPage : SKSpriteNode
+@interface joiPage : SKSpriteNode {
+	NSInteger midX;
+	NSInteger midY;
+	joiModel* theModel;
+}
+
+-(void)loadBundle;
+-(id)initWithSpriteImageName:(NSString*)name;
+-(void)setCoordX:(NSInteger)coordX andY:(NSInteger)coordX;
 
 @property (nonatomic) joiBook* theBook;
+//@property (nonatomic) CGPoint* midCoords;
 
 @end

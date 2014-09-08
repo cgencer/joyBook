@@ -11,7 +11,6 @@
 #import "JSONModelLib.h"
 #import "joiCollection.h"
 #import "joiScene.h"
-#import "joiModel.h"
 
 #define ARC4RANDOM_MAX	0x100000000
 static NSString * kViewTransformChanged = @"view transform changed";
@@ -23,7 +22,6 @@ static NSString * kViewTransformChanged = @"view transform changed";
 	NSData *data;
 //	BOOL *didPresentScene;
 	joiCollection* _bookSet;
-	joiModel* theModel;
 }
 @property(nonatomic, weak)joiScene *scene;
 @property(nonatomic, weak)UIView *clearContentView;
@@ -85,10 +83,7 @@ static NSString * kViewTransformChanged = @"view transform changed";
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-
-	theModel = [[joiModel alloc] init];
-	NSLog(@"...%@", [theModel bookProperty:@"stage"]);
-
+}
 
 	
 
@@ -122,7 +117,6 @@ static NSString * kViewTransformChanged = @"view transform changed";
 	[self.view addSubview:btn_moveBackward];
 */
 	// Do any additional setup after loading the view, typically from a nib.
-}
 
 - (void) btn_moveBack:(id) sender {
 	[bookPagesScrollView moveByPages:-1 animated:YES];

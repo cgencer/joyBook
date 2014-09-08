@@ -6,15 +6,29 @@
 //  Copyright (c) 2014 Cem Gencer. All rights reserved.
 //
 
+#import <AVFoundation/AVFoundation.h>
 #import "joiPage.h"
+#import "joiModel.h"
 
-@implementation joiPage {
+@implementation joiPage
 
-}
 -(id)initWithSpriteImageName:(NSString*)name {
+
     if(self = [super init]) {
-	}
-	return self;
+		theModel = [[joiModel alloc] init];
+		NSLog(@"...%@", [theModel bookProperty:@"stage"]);
+    }
+    return self;
+}
+
+-(void)loadBundle {
+//	[theModel bookProperty:@"stage"];
+	NSLog(@"loading...");
+}
+
+-(void)setCoordX:(NSInteger)coordX andY:(NSInteger)coordY {
+	midX = coordX;
+	midY = coordY;
 }
 
 -(void)removeFromParent {
