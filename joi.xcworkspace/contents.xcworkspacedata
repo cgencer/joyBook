@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:joiBookOne/joiBookOne.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:joi.xcodeproj">
    </FileRef>
    <FileRef

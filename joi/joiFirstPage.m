@@ -16,6 +16,9 @@
 -(id)init {
     if(self = [super initWithSpriteImageName:@"aPage"]) {
 
+		theModel = [[joiModel alloc] init];
+		NSLog(@"...%@", [theModel bookProperty:@"title"]);
+		
 		SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
 
 		myLabel.text = @"Hello, World!";

@@ -1,6 +1,27 @@
 {
-	"bookSet": [{
+	"bookSet": [{}, {}, {
 		"title": "test ismi",
+		"menuitem": {
+			"interval": 20,
+			"pause": 1000,
+			"frames": [
+				{
+					"image": "dove1"
+				}, {
+					"image": "dove2"
+				}, {
+					"image": "dove3"
+				}, {
+					"image": "dove4"
+				}, {
+					"image": "dove5"
+				}, {
+					"image": "dove6"
+				}, {
+					"image": "dove7"
+				}
+			]
+		},
 		"stage": "stage",
 		"audio": "",
 		"backPic": "back",

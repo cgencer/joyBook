@@ -1,0 +1,207 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		148FC51919BDB90A0064EB80 /* joiBookOne */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = joiBookOne; sourceTree = BUILT_PRODUCTS_DIR; };
+		148FC51D19BDB90A0064EB80 /* ContentInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ContentInfo.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		148FC51219BDB90A0064EB80 = {
+			isa = PBXGroup;
+			children = (
+				148FC51B19BDB90A0064EB80 /* joiBookOne */,
+				148FC51A19BDB90A0064EB80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		148FC51A19BDB90A0064EB80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				148FC51919BDB90A0064EB80 /* joiBookOne */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		148FC51B19BDB90A0064EB80 /* joiBookOne */ = {
+			isa = PBXGroup;
+			children = (
+				148FC51C19BDB90A0064EB80 /* Supporting Files */,
+			);
+			path = joiBookOne;
+			sourceTree = "<group>";
+		};
+		148FC51C19BDB90A0064EB80 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				148FC51D19BDB90A0064EB80 /* ContentInfo.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		148FC51819BDB90A0064EB80 /* joiBookOne */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 148FC52019BDB90A0064EB80 /* Build configuration list for PBXNativeTarget "joiBookOne" */;
+			buildPhases = (
+				148FC51719BDB90A0064EB80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = joiBookOne;
+			productName = joiBookOne;
+			productReference = 148FC51919BDB90A0064EB80 /* joiBookOne */;
+			productType = "com.apple.product-type.in-app-purchase-content";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		148FC51319BDB90A0064EB80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Cem Gencer";
+			};
+			buildConfigurationList = 148FC51619BDB90A0064EB80 /* Build configuration list for PBXProject "joiBookOne" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 148FC51219BDB90A0064EB80;
+			productRefGroup = 148FC51A19BDB90A0064EB80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				148FC51819BDB90A0064EB80 /* joiBookOne */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		148FC51719BDB90A0064EB80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		148FC51E19BDB90A0064EB80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+			};
+			name = Debug;
+		};
+		148FC51F19BDB90A0064EB80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+			};
+			name = Release;
+		};
+		148FC52119BDB90A0064EB80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = joiBookOne/ContentInfo.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/InAppPurchaseContent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = "";
+			};
+			name = Debug;
+		};
+		148FC52219BDB90A0064EB80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = joiBookOne/ContentInfo.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/InAppPurchaseContent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		148FC51619BDB90A0064EB80 /* Build configuration list for PBXProject "joiBookOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				148FC51E19BDB90A0064EB80 /* Debug */,
+				148FC51F19BDB90A0064EB80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		148FC52019BDB90A0064EB80 /* Build configuration list for PBXNativeTarget "joiBookOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				148FC52119BDB90A0064EB80 /* Debug */,
+				148FC52219BDB90A0064EB80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 148FC51319BDB90A0064EB80 /* Project object */;
+}

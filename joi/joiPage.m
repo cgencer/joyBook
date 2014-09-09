@@ -16,7 +16,7 @@
 
     if(self = [super init]) {
 		theModel = [[joiModel alloc] init];
-		NSLog(@"...%@", [theModel bookProperty:@"stage"]);
+//		NSLog(@"...%@", [theModel bookProperty:@"stage"]);
     }
     return self;
 }

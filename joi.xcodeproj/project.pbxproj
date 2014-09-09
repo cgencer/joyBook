@@ -23,6 +23,8 @@
 		148FC50719BD8A3A0064EB80 /* PBParallaxScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 148FC50619BD8A3A0064EB80 /* PBParallaxScrolling.m */; };
 		148FC50B19BD900C0064EB80 /* joiFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 148FC50A19BD900C0064EB80 /* joiFirstPage.m */; };
 		148FC50E19BDA74A0064EB80 /* joiHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 148FC50D19BDA74A0064EB80 /* joiHUD.m */; };
+		148FC51119BDA9CC0064EB80 /* joiLevels.m in Sources */ = {isa = PBXBuildFile; fileRef = 148FC51019BDA9CC0064EB80 /* joiLevels.m */; };
+		148FC52419BDB9D30064EB80 /* bookOne.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 148FC52319BDB9D30064EB80 /* bookOne.bundle */; };
 		14AF044719B51729005B9495 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AF044619B51729005B9495 /* Twitter.framework */; };
 		14AF044819B51743005B9495 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140E4C2119B4FD4C00E2ED4E /* Social.framework */; };
 		14AF044A19B51743005B9495 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AF044919B51743005B9495 /* Security.framework */; };
@@ -42,6 +44,9 @@
 		14B6916F19AB62D600C8B6E0 /* joiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6916E19AB62D600C8B6E0 /* joiViewController.m */; };
 		14B6917119AB62D600C8B6E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B6917019AB62D600C8B6E0 /* Images.xcassets */; };
 		14B6919519AFDB1000C8B6E0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B6919419AFDB1000C8B6E0 /* StoreKit.framework */; };
+		14CC4C1F19BEDCEB00E188C8 /* joiMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC4C1E19BEDCEB00E188C8 /* joiMenuItem.m */; };
+		14F60C4719BE47640008E019 /* joiButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F60C4619BE47640008E019 /* joiButton.m */; };
+		14F60C4A19BE50300008E019 /* joiAnimButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F60C4919BE50300008E019 /* joiAnimButton.m */; };
 		89F18F1A09384156BA55B6CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4417D9FC206496199DCCA17 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +84,9 @@
 		148FC50A19BD900C0064EB80 /* joiFirstPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiFirstPage.m; sourceTree = "<group>"; };
 		148FC50C19BDA74A0064EB80 /* joiHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiHUD.h; sourceTree = "<group>"; };
 		148FC50D19BDA74A0064EB80 /* joiHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiHUD.m; sourceTree = "<group>"; };
+		148FC50F19BDA9CC0064EB80 /* joiLevels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiLevels.h; sourceTree = "<group>"; };
+		148FC51019BDA9CC0064EB80 /* joiLevels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiLevels.m; sourceTree = "<group>"; };
+		148FC52319BDB9D30064EB80 /* bookOne.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = bookOne.bundle; sourceTree = "<group>"; };
 		14AF044419B50AF8005B9495 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		14AF044619B51729005B9495 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		14AF044919B51743005B9495 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -107,6 +115,12 @@
 		14B6918119AB62D600C8B6E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14B6918319AB62D600C8B6E0 /* joiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = joiTests.m; sourceTree = "<group>"; };
 		14B6919419AFDB1000C8B6E0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		14CC4C1D19BEDCEB00E188C8 /* joiMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiMenuItem.h; sourceTree = "<group>"; };
+		14CC4C1E19BEDCEB00E188C8 /* joiMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiMenuItem.m; sourceTree = "<group>"; };
+		14F60C4519BE47640008E019 /* joiButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiButton.h; sourceTree = "<group>"; };
+		14F60C4619BE47640008E019 /* joiButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiButton.m; sourceTree = "<group>"; };
+		14F60C4819BE50300008E019 /* joiAnimButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiAnimButton.h; sourceTree = "<group>"; };
+		14F60C4919BE50300008E019 /* joiAnimButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiAnimButton.m; sourceTree = "<group>"; };
 		A53D6200C3804005A1DE4107 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C4417D9FC206496199DCCA17 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -142,6 +156,10 @@
 				148FC50619BD8A3A0064EB80 /* PBParallaxScrolling.m */,
 				140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */,
 				140E4C1319B45AEF00E2ED4E /* DMLazyScrollView.h */,
+				14F60C4519BE47640008E019 /* joiButton.h */,
+				14F60C4619BE47640008E019 /* joiButton.m */,
+				14F60C4819BE50300008E019 /* joiAnimButton.h */,
+				14F60C4919BE50300008E019 /* joiAnimButton.m */,
 			);
 			name = external;
 			sourceTree = "<group>";
@@ -160,6 +178,8 @@
 				14AF045019B5DC04005B9495 /* set.json */,
 				140C598719B6FEB200170ED3 /* joiLocation.h */,
 				140C598819B6FEB200170ED3 /* joiLocation.m */,
+				14CC4C1D19BEDCEB00E188C8 /* joiMenuItem.h */,
+				14CC4C1E19BEDCEB00E188C8 /* joiMenuItem.m */,
 				140C598A19B6FEF100170ED3 /* joiFrame.h */,
 				140C598B19B6FEF100170ED3 /* joiFrame.m */,
 				140C59F819B9B3D800170ED3 /* joiSocial.h */,
@@ -223,6 +243,8 @@
 				14B6916E19AB62D600C8B6E0 /* joiViewController.m */,
 				140C599619B845CD00170ED3 /* joiScene.h */,
 				140C599719B845CD00170ED3 /* joiScene.m */,
+				148FC50F19BDA9CC0064EB80 /* joiLevels.h */,
+				148FC51019BDA9CC0064EB80 /* joiLevels.m */,
 				140C5A0519BD00C200170ED3 /* joiPage.h */,
 				140C5A0619BD00C200170ED3 /* joiPage.m */,
 				148FC50C19BDA74A0064EB80 /* joiHUD.h */,
@@ -238,6 +260,7 @@
 		14B6915F19AB62D600C8B6E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				148FC52319BDB9D30064EB80 /* bookOne.bundle */,
 				140C59EF19B87D5500170ED3 /* Main.storyboard */,
 				140C599B19B853E500170ED3 /* dove.atlas */,
 				140C599219B79E4000170ED3 /* back.png */,
@@ -335,6 +358,7 @@
 				140C59F119B87D5500170ED3 /* Main.storyboard in Resources */,
 				14B6917119AB62D600C8B6E0 /* Images.xcassets in Resources */,
 				140C599C19B853E500170ED3 /* dove.atlas in Resources */,
+				148FC52419BDB9D30064EB80 /* bookOne.bundle in Resources */,
 				14B6916319AB62D600C8B6E0 /* InfoPlist.strings in Resources */,
 				140C599419B79E4000170ED3 /* back.png in Resources */,
 				14AF045119B5DC04005B9495 /* set.json in Resources */,
@@ -384,18 +408,22 @@
 			files = (
 				14B6916F19AB62D600C8B6E0 /* joiViewController.m in Sources */,
 				14AF045D19B5ED3E005B9495 /* joiAnim.m in Sources */,
+				14F60C4A19BE50300008E019 /* joiAnimButton.m in Sources */,
 				140C5A0719BD00C200170ED3 /* joiPage.m in Sources */,
 				140C598C19B6FEF100170ED3 /* joiFrame.m in Sources */,
 				140C59FA19B9B3D800170ED3 /* joiSocial.m in Sources */,
+				14CC4C1F19BEDCEB00E188C8 /* joiMenuItem.m in Sources */,
 				140C599819B845CD00170ED3 /* joiScene.m in Sources */,
 				148FC50E19BDA74A0064EB80 /* joiHUD.m in Sources */,
 				140C598919B6FEB200170ED3 /* joiLocation.m in Sources */,
+				14F60C4719BE47640008E019 /* joiButton.m in Sources */,
 				14AF045A19B5EC8C005B9495 /* joiBook.m in Sources */,
 				148FC50719BD8A3A0064EB80 /* PBParallaxScrolling.m in Sources */,
 				140E4C1419B45AEF00E2ED4E /* DMLazyScrollView.m in Sources */,
 				148FC50B19BD900C0064EB80 /* joiFirstPage.m in Sources */,
 				14B6916519AB62D600C8B6E0 /* main.m in Sources */,
 				14B6916919AB62D600C8B6E0 /* joiAppDelegate.m in Sources */,
+				148FC51119BDA9CC0064EB80 /* joiLevels.m in Sources */,
 				140C598F19B70E9E00170ED3 /* joiCollection.m in Sources */,
 				140C59F719B9944800170ED3 /* joiModel.m in Sources */,
 			);

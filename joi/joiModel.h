@@ -15,6 +15,10 @@
 	joiCollection *_collection;
 }
 
+@property (nonatomic) NSInteger totalBooks;
+@property (nonatomic) NSInteger activeBook;
+@property (nonatomic) NSInteger activePage;
+
 +(id)sharedManager;
 -(joiBook*)selectBook:(NSInteger *)bookid;
 -(NSString*)bookProperty:(NSString *)selector;

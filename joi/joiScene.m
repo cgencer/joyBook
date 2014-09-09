@@ -11,8 +11,10 @@
 #import "joiPage.h"
 #import "joiHUD.h"
 #import "joiFirstPage.h"
+#import "joiLevels.h"
 
 @interface joiScene () {
+	SKNode *_layerEntrance;
 	SKNode *_layerBackground;
 	SKNode *_layerBackgroundAnimation;
 	SKNode *_layerForeground;
@@ -28,21 +30,30 @@
 
 //        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
 
+
+		_layerEntrance = [SKNode node];
+		[self addChild:_layerEntrance];
+		_layerEntrance.zPosition = 0;
+
 		_layerBackground = [SKNode node];
 		[self addChild:_layerBackground];
-		_layerBackground.zPosition = 0;
+		_layerBackground.zPosition = 1;
 		
 		_layerBackgroundAnimation = [SKNode node];
 		[self addChild:_layerBackgroundAnimation];
-		_layerBackgroundAnimation.zPosition = 1;
+		_layerBackgroundAnimation.zPosition = 2;
 
 		_layerForeground = [SKNode node];
 		[self addChild:_layerForeground];
-		_layerForeground.zPosition = 2;
+		_layerForeground.zPosition = 3;
 
 		_layerHUD = [SKNode node];
 		[self addChild:_layerHUD];
 		_layerHUD.zPosition = 4;
+
+		joiPage *entrancePage = [joiLevels new];
+		[_layerEntrance addChild:entrancePage];
+		[entrancePage setCoordX:CGRectGetMidX(self.frame) andY:CGRectGetMidY(self.frame)];
 
 		joiPage *aPage = [joiFirstPage new];
 		[_layerForeground addChild:aPage];

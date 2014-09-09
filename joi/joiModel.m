@@ -12,7 +12,12 @@
 
 #define defaultBookNum		0
 
-@implementation joiModel
+@implementation joiModel {
+}
+
+@synthesize totalBooks = _totalBooks;
+@synthesize activeBook = _activeBook;
+@synthesize activePage = _activePage;
 
 #pragma mark Singleton Methods
 
@@ -27,6 +32,7 @@
 
 -(id)init {
 	if (self = [super init]) {
+		_activeBook = defaultBookNum;
 		theBook = [self selectBook:defaultBookNum];
 	}
 	return self;
@@ -55,9 +61,10 @@
 		NSLog(@"ERROR while initialising the bookset: %@", _collection);
 	}
 	
-	NSArray* book = _collection.bookSet;
-	joiBook *_theBook = [book objectAtIndex:0];
-	NSLog(@"book initialized...");
+	NSArray* books = _collection.bookSet;
+	_totalBooks = [books count];
+	joiBook *_theBook = [books objectAtIndex:0];
+	NSLog(@"book initialized... %i", _totalBooks);
 	return _theBook;
 }
 
