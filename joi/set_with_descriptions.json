@@ -1,0 +1,68 @@
+{
+	"bookset": [{
+		"title": "",
+		"back": [
+			{					// as used for cloud etc background animations, there can be only one child!
+				"startPos": {
+				   "x": 0,
+				   "y": 0
+				},
+				"interval": 25,		// if used, all frames have same interval		**OPTIONAL
+				"type": "BACKGROUND",
+				"tween": "STILL",
+				"frames": [
+					{
+						"image": "bulut1.png"
+					}, {
+						"image": "bulut2.png"
+					}, {
+						"image": "bulut3.png"
+					}, {
+						"image": "bulut4.png"
+					}, 2{
+						"image": "bulut5.png"
+					}
+				]
+			}
+		],
+		"stage": "stage.png",		// stage image with transparency
+		"audio": "",				// background audio
+		"actions": [
+			{
+				"type": "TOUCH",		// NONE, TOUCH (plays anim on touch), LOOP (looping anims)				**OPTIONAL
+				"tween": "LINEAR",		// NONE, FRAME (uses coords for each frame), LINEAR (calculates motion)		**OPTIONAL
+				"startTime": 4500,
+				"startPos": {
+					"x": 100,
+					"y": 50
+				},
+				"endPos": {
+					"x": 100,
+					"y": 50
+				},
+				"frames": [
+					{
+						"image": "kelle1.png",
+						"pause": 12		// ms. between next image display
+					}, {
+						"image": "kelle2.png",
+						"pause": 12
+					}, {
+						"image": "kelle3.png",
+						"pause": 20
+					}, {
+						"image": "kelle4.png",
+						"pause": 20
+					}, {
+						"image": "kelle5.png",
+						"pause": 12
+					}, {
+						"image": "kelle6.png",
+						"pause": 12
+					}
+				],
+				"audio": "ses.caf"	//					**OPTIONAL
+			}
+		]
+	}]
+}
