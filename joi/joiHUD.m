@@ -11,19 +11,22 @@
 @implementation joiHUD
 
 -(id)init {
-    if(self = [super initWithSpriteImageName:@"fireButtonNode"]) {
+    if(self = [super initWithSpriteImageName:@"backButton"]) {
 		[self addChild: [self fireButtonNode]];
+		CGSize sized = [super getBoundaries];
+		NSLog(@"joiHUD::::> %i x %i",
+			  (int)sized.width, (int)sized.height);
 	}
 	return self;
 }
 
 - (SKSpriteNode *)fireButtonNode
 {
-    SKSpriteNode *fireNode = [SKSpriteNode spriteNodeWithImageNamed:@"fireButton.png"];
+    SKSpriteNode *fireNode = [SKSpriteNode spriteNodeWithImageNamed:@"backbutton.png"];
     fireNode.position = CGPointMake(100,200);
-    fireNode.name = @"fireButtonNode";			//how the node is identified later
+    fireNode.name = @"backButton";			//how the node is identified later
     fireNode.zPosition = 1.0;
-    return fireNode;
+	return fireNode;
 }
 
 //handle touch events
@@ -34,7 +37,7 @@
     SKNode *node = [self nodeAtPoint:location];
 	
     //if fire button touched, bring the rain
-    if ([node.name isEqualToString:@"fireButtonNode"]) {
+    if ([node.name isEqualToString:@"backButton"]) {
 		//do whatever...
     }
 }

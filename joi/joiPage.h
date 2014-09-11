@@ -11,16 +11,16 @@
 #import "joiBook.h"
 
 @interface joiPage : SKSpriteNode {
-	NSInteger midX;
-	NSInteger midY;
 	joiModel* theModel;
+@protected
+	CGSize _screenDimensions;
 }
 
--(void)loadBundle;
 -(id)initWithSpriteImageName:(NSString*)name;
--(void)setCoordX:(NSInteger)coordX andY:(NSInteger)coordX;
+-(void)setBoundaries:(CGSize)boundSize;
+-(CGSize)getBoundaries;
 
 @property (nonatomic) joiBook* theBook;
-//@property (nonatomic) CGPoint* midCoords;
+@property (nonatomic, assign) CGSize screenDimensions;
 
 @end

@@ -13,11 +13,13 @@
 #define defaultBookNum		0
 
 @implementation joiModel {
+	joiBook *theBook;
+	joiCollection *_collection;
 }
 
-@synthesize totalBooks = _totalBooks;
-@synthesize activeBook = _activeBook;
-@synthesize activePage = _activePage;
+@synthesize totalBooks;
+@synthesize activeBook;
+@synthesize activePage;
 
 #pragma mark Singleton Methods
 
@@ -32,7 +34,7 @@
 
 -(id)init {
 	if (self = [super init]) {
-		_activeBook = defaultBookNum;
+		activeBook = defaultBookNum;
 		theBook = [self selectBook:defaultBookNum];
 	}
 	return self;
@@ -61,29 +63,25 @@
 		NSLog(@"ERROR while initialising the bookset: %@", _collection);
 	}
 	
-	NSArray* books = _collection.bookSet;
-	_totalBooks = [books count];
+	NSArray *books = _collection.bookSet;
+	totalBooks = [books count];
 	joiBook *_theBook = [books objectAtIndex:0];
-	NSLog(@"book initialized... %i", _totalBooks);
+	NSLog(@"book initialized... %i", totalBooks);
 	return _theBook;
 }
 
--(NSString*)bookProperty:(NSString *)selector
+-(id)bookProperty:(NSString *)selector withBookID:(NSInteger *)bookID
 {
-	if (theBook == nil) {
-		theBook = [self selectBook:0];
-	}
+	NSInteger *bid = (bookID == nil) ? defaultBookNum : bookID;
+	theBook = [self selectBook:bid];
 
-	NSString* prop = [theBook valueForKey:selector];
+	return [theBook valueForKey:selector];
 
-	NSString* path = [[NSString alloc] initWithFormat:@"%@", prop];
-	NSString* imgPath = [[NSBundle mainBundle] pathForResource:path ofType:@"png"];
+//	NSString* path = [[NSString alloc] initWithFormat:@"%@", prop];
+//	NSString* imgPath = [[NSBundle mainBundle] pathForResource:path ofType:@"png"];
 
 //	UIImage* image = [UIImage imageWithContentsOfFile:imgPath];
 //	UIImageView *imgView = [[UIImageView alloc] initWithImage:image];
-
-	NSLog(@"checking: %@", imgPath);
-	return path;
 }
 
 - (void)dealloc {

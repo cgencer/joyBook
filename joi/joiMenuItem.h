@@ -13,8 +13,8 @@
 
 @interface joiMenuItem : JSONModel
 
-@property (strong, nonatomic) NSNumber *interval;
-@property (strong, nonatomic) NSNumber *pause;
-@property (strong, nonatomic) NSArray<joiFrame, ConvertOnDemand>* frames;
+@property (assign, nonatomic) NSNumber *interval;
+@property (assign, nonatomic) NSNumber *pause;
+@property (strong, nonatomic) NSArray<joiFrame>* frames;
 
 @end

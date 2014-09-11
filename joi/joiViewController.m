@@ -7,25 +7,11 @@
 //
 
 #import "joiViewController.h"
-#import "DMLazyScrollView.h"
 #import "JSONModelLib.h"
-#import "joiCollection.h"
 #import "joiScene.h"
 
 #define ARC4RANDOM_MAX	0x100000000
 static NSString * kViewTransformChanged = @"view transform changed";
-
-@interface joiViewController () <DMLazyScrollViewDelegate> {
-	DMLazyScrollView* bookPagesScrollView;
-	NSMutableArray* viewControllerArray;
-	NSArray *_locations;
-	NSData *data;
-//	BOOL *didPresentScene;
-	joiCollection* _bookSet;
-}
-@property(nonatomic, weak)joiScene *scene;
-@property(nonatomic, weak)UIView *clearContentView;
-@end
 
 @implementation joiViewController
 
@@ -39,7 +25,7 @@ static NSString * kViewTransformChanged = @"view transform changed";
 {
 	[super viewWillLayoutSubviews];
 // Configure the view.
-	SKView * skView = (SKView *)self.view;
+	SKView *skView = (SKView *)self.view;
 	if (!skView.scene) {
 		skView.showsFPS = YES;
 		skView.showsNodeCount = YES;
@@ -48,9 +34,8 @@ static NSString * kViewTransformChanged = @"view transform changed";
 		scene.scaleMode = SKSceneScaleModeAspectFill;
 // Present the scene.
 		[skView presentScene:scene];
-		NSLog(@"scene built up...");
 
-	    CGSize contentSize = skView.frame.size;
+//	    CGSize contentSize = skView.frame.size;
 //		[scene setContentSize:contentSize];
 
 // PREPARE PAGES

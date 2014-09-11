@@ -6,8 +6,14 @@
 //  Copyright (c) 2014 Cem Gencer. All rights reserved.
 //
 
+#import <SpriteKit/SpriteKit.h>
 #import "joiPage.h"
+#import "joiButton.h"
+#import "joiBook.h"
+#import "joiMenuItem.h"
 
-@interface joiLevels : joiPage
+@interface joiLevels : joiPage {
+
+}
 
 @end

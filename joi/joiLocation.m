@@ -10,4 +10,12 @@
 
 @implementation joiLocation
 
++(JSONKeyMapper*)keyMapper
+{
+  return [[JSONKeyMapper alloc] initWithDictionary:@{
+    @"location.x": @"locX",
+    @"location.y.usd": @"locY"
+  }];
+}
+
 @end

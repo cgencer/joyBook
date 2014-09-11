@@ -17,13 +17,13 @@
     if(self = [super initWithSpriteImageName:@"aPage"]) {
 
 		theModel = [[joiModel alloc] init];
-		NSLog(@"...%@", [theModel bookProperty:@"title"]);
+		NSLog(@"...%@", [theModel bookProperty:@"title" withBookID:0]);
 		
 		SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
 
 		myLabel.text = @"Hello, World!";
 		myLabel.fontSize = 30;
-		myLabel.position = CGPointMake(midX, midY);
+//		myLabel.position = CGPointMake(midX, midY);
 
 		[self addChild:myLabel];
 
@@ -40,7 +40,7 @@
 		
 		SKTexture *temp = _frames[0];
 		_dove = [SKSpriteNode spriteNodeWithTexture:temp];
-		_dove.position = CGPointMake(midX, midY);
+//		_dove.position = CGPointMake(midX, midY);
 		
 		[self addChild:_dove];
 		[self flyingDove];

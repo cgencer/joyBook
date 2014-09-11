@@ -28,8 +28,7 @@
  * This is the designated Initializer
  */
 - (id)initWithTextureNormal:(SKTexture *)normal selected:(SKTexture *)selected disabled:(SKTexture *)disabled {
-    self = [super initWithTexture:normal color:[UIColor whiteColor] size:normal.size];
-    if (self) {
+    if (self = [super initWithTexture:normal color:[UIColor whiteColor] size:normal.size]) {
         [self setNormalTexture:normal];
         [self setSelectedTexture:selected];
         [self setDisabledTexture:disabled];

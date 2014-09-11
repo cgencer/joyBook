@@ -6,31 +6,20 @@
 //  Copyright (c) 2014 Cem Gencer. All rights reserved.
 //
 
-#import <AVFoundation/AVFoundation.h>
 #import "joiScene.h"
-#import "joiPage.h"
-#import "joiHUD.h"
-#import "joiFirstPage.h"
-#import "joiLevels.h"
-
-@interface joiScene () {
-	SKNode *_layerEntrance;
-	SKNode *_layerBackground;
-	SKNode *_layerBackgroundAnimation;
-	SKNode *_layerForeground;
-	SKNode *_layerHUD;
-}
-@end
+#import "joiCore.h"
 
 @implementation joiScene
 
+@synthesize boundSize = _boundSize;
 
 -(id)initWithSize:(CGSize)size {
 	if (self = [super initWithSize:size]) {
+		joiCore *jCore = [[joiCore alloc] init];
+		jCore.delegate = self;
+		[jCore helloDelegate];
 
 //        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
-
-
 		_layerEntrance = [SKNode node];
 		[self addChild:_layerEntrance];
 		_layerEntrance.zPosition = 0;
@@ -51,23 +40,29 @@
 		[self addChild:_layerHUD];
 		_layerHUD.zPosition = 4;
 
-		joiPage *entrancePage = [joiLevels new];
-		[_layerEntrance addChild:entrancePage];
-		[entrancePage setCoordX:CGRectGetMidX(self.frame) andY:CGRectGetMidY(self.frame)];
+		joiPage *levelSelectionPage = [joiLevels new];
+		[_layerEntrance addChild:levelSelectionPage];
+		levelSelectionPage.screenDimensions = size;
+		NSLog(@"joiScene:::> %f x %f", size.width, size.height);
+
+//		[levelSelectionPage setBoundaries:size];
 
 		joiPage *aPage = [joiFirstPage new];
+		aPage.screenDimensions = size;
 		[_layerForeground addChild:aPage];
-		[aPage setCoordX:CGRectGetMidX(self.frame) andY:CGRectGetMidY(self.frame)];
+		[aPage setBoundaries:size];
 
-		joiPage *hPage = [joiHUD new];
-		[_layerHUD addChild:hPage];
-		[hPage setCoordX:CGRectGetMidX(self.frame) andY:CGRectGetMidY(self.frame)];
-
+		joiPage *hudPage = [joiHUD new];
+		hudPage.screenDimensions = size;
+		[_layerHUD addChild:hudPage];
+		[hudPage setBoundaries:size];
 	}
 	return self;
 }
 
-
+-(void)sayHello:(joiCore *)jc{
+    NSLog(@"Hiya!");
+}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 	

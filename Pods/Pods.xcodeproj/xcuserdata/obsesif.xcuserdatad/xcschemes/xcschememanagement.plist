@@ -4,65 +4,65 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-BlocksKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-Facebook-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods-STTwitter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06D89B1473884D0CA81143BA</key>
+		<key>1CC61C9CFC99472FA6451C91</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37BAF6653E994F15AF11EEFB</key>
+		<key>20CFAA5CE618489B9020D86B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>42A2E8C899FE4FEAB6D59765</key>
+		<key>22A8F55EE8D24CC6BEB49194</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>51C8F6BE2E15488B82B85B73</key>
+		<key>4B7111085C3A47FEB13CB1D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0575556E5304B5FAAA326FC</key>
+		<key>B689F8A6F1484E268DA5E395</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE61455F076C4E5FB91711FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

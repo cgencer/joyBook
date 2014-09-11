@@ -45,6 +45,8 @@
 		14B6917119AB62D600C8B6E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B6917019AB62D600C8B6E0 /* Images.xcassets */; };
 		14B6919519AFDB1000C8B6E0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B6919419AFDB1000C8B6E0 /* StoreKit.framework */; };
 		14CC4C1F19BEDCEB00E188C8 /* joiMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC4C1E19BEDCEB00E188C8 /* joiMenuItem.m */; };
+		14CC4C2319C03E8D00E188C8 /* backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 14CC4C2219C03E8D00E188C8 /* backbutton.png */; };
+		14CC4C2C19C1AF8300E188C8 /* joiCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC4C2B19C1AF8300E188C8 /* joiCore.m */; };
 		14F60C4719BE47640008E019 /* joiButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F60C4619BE47640008E019 /* joiButton.m */; };
 		14F60C4A19BE50300008E019 /* joiAnimButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F60C4919BE50300008E019 /* joiAnimButton.m */; };
 		89F18F1A09384156BA55B6CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4417D9FC206496199DCCA17 /* libPods.a */; };
@@ -117,6 +119,9 @@
 		14B6919419AFDB1000C8B6E0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		14CC4C1D19BEDCEB00E188C8 /* joiMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiMenuItem.h; sourceTree = "<group>"; };
 		14CC4C1E19BEDCEB00E188C8 /* joiMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiMenuItem.m; sourceTree = "<group>"; };
+		14CC4C2219C03E8D00E188C8 /* backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbutton.png; sourceTree = "<group>"; };
+		14CC4C2A19C1AF8300E188C8 /* joiCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiCore.h; sourceTree = "<group>"; };
+		14CC4C2B19C1AF8300E188C8 /* joiCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiCore.m; sourceTree = "<group>"; };
 		14F60C4519BE47640008E019 /* joiButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiButton.h; sourceTree = "<group>"; };
 		14F60C4619BE47640008E019 /* joiButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiButton.m; sourceTree = "<group>"; };
 		14F60C4819BE50300008E019 /* joiAnimButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiAnimButton.h; sourceTree = "<group>"; };
@@ -239,6 +244,8 @@
 				14AF044F19B5DBCF005B9495 /* model */,
 				14B6916719AB62D600C8B6E0 /* joiAppDelegate.h */,
 				14B6916819AB62D600C8B6E0 /* joiAppDelegate.m */,
+				14CC4C2A19C1AF8300E188C8 /* joiCore.h */,
+				14CC4C2B19C1AF8300E188C8 /* joiCore.m */,
 				14B6916D19AB62D600C8B6E0 /* joiViewController.h */,
 				14B6916E19AB62D600C8B6E0 /* joiViewController.m */,
 				140C599619B845CD00170ED3 /* joiScene.h */,
@@ -260,6 +267,7 @@
 		14B6915F19AB62D600C8B6E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14CC4C2219C03E8D00E188C8 /* backbutton.png */,
 				148FC52319BDB9D30064EB80 /* bookOne.bundle */,
 				140C59EF19B87D5500170ED3 /* Main.storyboard */,
 				140C599B19B853E500170ED3 /* dove.atlas */,
@@ -361,6 +369,7 @@
 				148FC52419BDB9D30064EB80 /* bookOne.bundle in Resources */,
 				14B6916319AB62D600C8B6E0 /* InfoPlist.strings in Resources */,
 				140C599419B79E4000170ED3 /* back.png in Resources */,
+				14CC4C2319C03E8D00E188C8 /* backbutton.png in Resources */,
 				14AF045119B5DC04005B9495 /* set.json in Resources */,
 				140C599519B79E4000170ED3 /* stage.png in Resources */,
 			);
@@ -412,6 +421,7 @@
 				140C5A0719BD00C200170ED3 /* joiPage.m in Sources */,
 				140C598C19B6FEF100170ED3 /* joiFrame.m in Sources */,
 				140C59FA19B9B3D800170ED3 /* joiSocial.m in Sources */,
+				14CC4C2C19C1AF8300E188C8 /* joiCore.m in Sources */,
 				14CC4C1F19BEDCEB00E188C8 /* joiMenuItem.m in Sources */,
 				140C599819B845CD00170ED3 /* joiScene.m in Sources */,
 				148FC50E19BDA74A0064EB80 /* joiHUD.m in Sources */,

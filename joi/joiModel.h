@@ -10,10 +10,7 @@
 #import "joiBook.h"
 #import "joiCollection.h"
 
-@interface joiModel : NSObject {
-	joiBook *theBook;
-	joiCollection *_collection;
-}
+@interface joiModel : NSObject
 
 @property (nonatomic) NSInteger totalBooks;
 @property (nonatomic) NSInteger activeBook;
@@ -21,6 +18,6 @@
 
 +(id)sharedManager;
 -(joiBook*)selectBook:(NSInteger *)bookid;
--(NSString*)bookProperty:(NSString *)selector;
+-(id)bookProperty:(NSString *)selector withBookID:(NSInteger *)bookID;
 
 @end

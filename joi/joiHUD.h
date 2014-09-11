@@ -10,7 +10,6 @@
 
 @interface joiHUD : joiPage
 
-- (void)loadBundle;
 - (SKSpriteNode *)fireButtonNode;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 

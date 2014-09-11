@@ -13,6 +13,6 @@
 @interface joiFrame : JSONModel
 
 @property (strong, nonatomic) NSString *imageFile;
-@property (strong, nonatomic) NSNumber<Optional> *pause;
+@property (assign, nonatomic) NSNumber<Optional> *pause;
 
 @end
