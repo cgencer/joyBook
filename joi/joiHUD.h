@@ -8,9 +8,12 @@
 
 #import "joiPage.h"
 
-@interface joiHUD : joiPage
+@interface joiHUD : joiPage {
+	CGSize theSize;
+}
 
-- (SKSpriteNode *)fireButtonNode;
+-(id)initWithSize:(CGSize)theSize;
+- (SKSpriteNode *)backButtonNode;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 
 @end

@@ -9,21 +9,19 @@
 #import <Foundation/Foundation.h>
 //#import <BlaClass/BlaClass.h>
 
-@class joiCore;             //define class, so protocol can see MyClass
+@class joiCore;
 
-// define the protocol for the delegate
 @protocol joiCoreDelegate
 
-// define protocol functions that can be used in any class using this delegate
 -(void)sayHello:(joiCore *) jc;
 
 @end
 
 @interface joiCore : NSObject {
 }
-@property (nonatomic, assign) id delegate; //define MyClassDelegate as delegate
 
-// define public functions
+@property (nonatomic, assign) id delegate;
+
 -(void)helloDelegate;
 
 @end

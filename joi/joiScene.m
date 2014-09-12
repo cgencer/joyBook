@@ -11,13 +11,11 @@
 
 @implementation joiScene
 
-@synthesize boundSize = _boundSize;
-
 -(id)initWithSize:(CGSize)size {
 	if (self = [super initWithSize:size]) {
-		joiCore *jCore = [[joiCore alloc] init];
-		jCore.delegate = self;
-		[jCore helloDelegate];
+//		joiCore *jCore = [[joiCore alloc] init];
+//		jCore.delegate = self;
+//		[jCore helloDelegate:size];
 
 //        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
 		_layerEntrance = [SKNode node];
@@ -42,34 +40,18 @@
 
 		joiPage *levelSelectionPage = [joiLevels new];
 		[_layerEntrance addChild:levelSelectionPage];
-		levelSelectionPage.screenDimensions = size;
-		NSLog(@"joiScene:::> %f x %f", size.width, size.height);
-
-//		[levelSelectionPage setBoundaries:size];
 
 		joiPage *aPage = [joiFirstPage new];
-		aPage.screenDimensions = size;
 		[_layerForeground addChild:aPage];
-		[aPage setBoundaries:size];
 
-		joiPage *hudPage = [joiHUD new];
-		hudPage.screenDimensions = size;
+		joiPage *hudPage = [[joiHUD alloc] initWithSize:size];
 		[_layerHUD addChild:hudPage];
-		[hudPage setBoundaries:size];
 	}
 	return self;
 }
 
--(void)sayHello:(joiCore *)jc{
-    NSLog(@"Hiya!");
-}
-
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 	
-}
-
--(void)setContentScale:(CGFloat)scale;
-{
 }
 
 -(void)update:(CFTimeInterval)currentTime {

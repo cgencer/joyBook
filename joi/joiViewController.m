@@ -32,11 +32,11 @@ static NSString * kViewTransformChanged = @"view transform changed";
 // Create and configure the scene.
 		SKScene *scene = [joiScene sceneWithSize:skView.bounds.size];
 		scene.scaleMode = SKSceneScaleModeAspectFill;
+		NSLog(@"ANCHOR: %i x %i", (int)scene.anchorPoint.x, (int)scene.anchorPoint.x);
 // Present the scene.
-		[skView presentScene:scene];
+//        scene.position = CGPointMake(-CGRectGetMidX(skView.bounds), -CGRectGetMidY(skView.bounds));
 
-//	    CGSize contentSize = skView.frame.size;
-//		[scene setContentSize:contentSize];
+		[skView presentScene:scene];
 
 // PREPARE PAGES
 /*		

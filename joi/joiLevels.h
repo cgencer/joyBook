@@ -16,4 +16,6 @@
 
 }
 
+-(id)initWithSize:(CGSize)theSize;
+
 @end

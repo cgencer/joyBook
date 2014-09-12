@@ -12,7 +12,7 @@
 #import "joiMenuItem.h"
 
 @implementation joiLevels
--(id)init {
+-(id)initWithSize:(CGSize)theSize {
     if(self = [super initWithSpriteImageName:@"levels"]) {
 		theModel = [[joiModel alloc] init];
 
@@ -22,9 +22,6 @@
 //			NSLog(@"the item %i: %@", i, [_menuItem class]);
 //			(id) *_prop = [theModel bookProperty:@"title" withBookID:i];
 		}
-
-		NSLog(@"joiLevels::> %f x %f",
-			  self.screenDimensions.width, self.screenDimensions.height);
 
 		joiButton *backButton = [[joiButton alloc] initWithImageNamedNormal:@"buttonNormal" selected:@"buttonSelected"];
 		[backButton setPosition:CGPointMake(100, 100)];

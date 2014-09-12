@@ -14,7 +14,7 @@
 #import "joiFirstPage.h"
 #import "joiLevels.h"
 
-@interface joiScene : SKScene <joiCoreDelegate> {
+@interface joiScene : SKScene {
 	SKNode *_layerEntrance;
 	SKNode *_layerBackground;
 	SKNode *_layerBackgroundAnimation;
@@ -22,10 +22,8 @@
 	SKNode *_layerHUD;
 }
 
-@property (nonatomic) CGSize contentSize;
-@property (nonatomic) CGPoint contentOffset;
-@property (nonatomic) CGSize boundSize;
-
--(void)setContentScale:(CGFloat)scale;
+-(id)initWithSize:(CGSize)size;
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+-(void)update:(CFTimeInterval)currentTime;
 
 @end

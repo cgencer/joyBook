@@ -9,7 +9,8 @@
 #import "joiCore.h"
 
 @implementation joiCore
-@synthesize delegate; //synthesise  MyClassDelegate delegate
+
+@synthesize delegate;
 
 -(id)init {
     self = [super init];

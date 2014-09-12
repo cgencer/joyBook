@@ -12,8 +12,6 @@
 
 @implementation joiPage
 
-@synthesize screenDimensions = _screenDimensions;
-
 -(id)initWithSpriteImageName:(NSString*)name {
 
     if(self = [super init]) {
@@ -21,15 +19,6 @@
 //		NSLog(@"...%@", [theModel bookProperty:@"stage"]);
     }
     return self;
-}
-
--(void)setBoundaries:(CGSize)boundSize {
-	_screenDimensions = boundSize;
-	NSLog(@"joiPage:SD> %i x %i", (int)_screenDimensions.width, (int)_screenDimensions.height);
-}
-
--(CGSize)getBoundaries {
-	return _screenDimensions;
 }
 
 -(void)removeFromParent {

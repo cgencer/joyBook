@@ -12,15 +12,11 @@
 
 @interface joiPage : SKSpriteNode {
 	joiModel* theModel;
-@protected
-	CGSize _screenDimensions;
 }
 
--(id)initWithSpriteImageName:(NSString*)name;
--(void)setBoundaries:(CGSize)boundSize;
--(CGSize)getBoundaries;
-
 @property (nonatomic) joiBook* theBook;
-@property (nonatomic, assign) CGSize screenDimensions;
+
+-(id)initWithSpriteImageName:(NSString*)name;
+
 
 @end
