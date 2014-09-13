@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SpriteKit-Helper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1CC61C9CFC99472FA6451C91</key>
+		<key>0A3201B7CA8146B5971ED8CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>20CFAA5CE618489B9020D86B</key>
+		<key>5C44856970364A52A7B70334</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>22A8F55EE8D24CC6BEB49194</key>
+		<key>5D306E00AB464B25A4E58907</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4B7111085C3A47FEB13CB1D0</key>
+		<key>8E1D10B04468485490EFD5FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B689F8A6F1484E268DA5E395</key>
+		<key>9B9AF152BE994FBD88A9E92D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE61455F076C4E5FB91711FE</key>
+		<key>E6C4C1F45547437497A0680B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC789258C3D641F4B4B5ED81</key>
 		<dict>
 			<key>primary</key>
 			<true/>

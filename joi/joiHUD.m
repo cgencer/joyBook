@@ -12,7 +12,8 @@
 
 -(id)initWithSize:(CGSize)size {
     if(self = [super initWithSpriteImageName:@"backButton"]) {
-		theSize = size;
+		// flipping width <-> height due orientation
+		theSize = CGSizeMake(size.height, size.width);
 		NSLog(@"joiHUD::::> %i x %i",
 			  (int)theSize.width, (int)theSize.height);
         [self addChild: [self backButtonNode]];
@@ -22,7 +23,7 @@
 
 - (SKSpriteNode *)backButtonNode
 {
-    SKSpriteNode *buttonBack = [SKSpriteNode spriteNodeWithImageNamed:@"backbutton.png"];
+    SKBButtonNode *buttonBack = [SKBButtonNode spriteNodeWithImageNamed:@"backbutton.png"];
     CGRect layerSize = [buttonBack calculateAccumulatedFrame];
     NSLog(@"#### %i x %i", (int)theSize.width, (int)theSize.height);
     buttonBack.position = CGPointMake(layerSize.size.width / 2, layerSize.size.height / 2);

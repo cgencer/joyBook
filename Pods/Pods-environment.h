@@ -66,3 +66,9 @@
 #define COCOAPODS_VERSION_MINOR_STTwitter 1
 #define COCOAPODS_VERSION_PATCH_STTwitter 4
 
+// SpriteKit-Helper
+#define COCOAPODS_POD_AVAILABLE_SpriteKit_Helper
+#define COCOAPODS_VERSION_MAJOR_SpriteKit_Helper 0
+#define COCOAPODS_VERSION_MINOR_SpriteKit_Helper 0
+#define COCOAPODS_VERSION_PATCH_SpriteKit_Helper 3
+

@@ -7,15 +7,15 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "SKBButtonNode.h"
 #import "joiPage.h"
-#import "joiButton.h"
 #import "joiBook.h"
 #import "joiMenuItem.h"
 
 @interface joiLevels : joiPage {
-
+	CGSize theSize;
 }
 
--(id)initWithSize:(CGSize)theSize;
+-(id)initWithSize:(CGSize)size;
 
 @end

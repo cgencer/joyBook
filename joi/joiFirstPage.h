@@ -8,6 +8,10 @@
 
 #import "joiPage.h"
 
-@interface joiFirstPage : joiPage
+@interface joiFirstPage : joiPage {
+	CGSize theSize;
+}
+
+-(id)initWithSize:(CGSize)theSize;
 
 @end

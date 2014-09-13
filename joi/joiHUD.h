@@ -7,6 +7,7 @@
 //
 
 #import "joiPage.h"
+#import "SKBButtonNode.h"
 
 @interface joiHUD : joiPage {
 	CGSize theSize;

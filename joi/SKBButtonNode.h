@@ -1,13 +1,15 @@
 //
-//  joiButton.h
-//  joi
+//  SKBButtonNode.h
+//  Legacy Assault
 //
-//  Created by Cem Gencer on 8.09.2014.
-//  Copyright (c) 2014 Cem Gencer. All rights reserved.
+//  Created by Dmitry Volevodz on 24/03/14.
+//  Copyright (c) 2014 Dmitry Volevodz. All rights reserved.
 //
 
 #import <SpriteKit/SpriteKit.h>
-@interface joiButton : SKSpriteNode
+@class SKUMultiLineLabelNode;
+
+@interface SKBButtonNode : SKSpriteNode
 
 @property (nonatomic, readonly) SEL actionTouchUpInside;
 @property (nonatomic, readonly) SEL actionTouchDown;
@@ -18,16 +20,16 @@
 
 @property (nonatomic) BOOL isEnabled;
 @property (nonatomic) BOOL isSelected;
-@property (nonatomic, readonly, strong) SKLabelNode *title;
+@property (nonatomic, readonly, strong) SKUMultiLineLabelNode *title;
 @property (nonatomic, readwrite, strong) SKTexture *normalTexture;
 @property (nonatomic, readwrite, strong) SKTexture *selectedTexture;
 @property (nonatomic, readwrite, strong) SKTexture *disabledTexture;
 
-- (id)initWithTextureNormal:(SKTexture *)normal selected:(SKTexture *)selected;
-- (id)initWithTextureNormal:(SKTexture *)normal selected:(SKTexture *)selected disabled:(SKTexture *)disabled; // Designated Initializer
+- (instancetype)initWithTextureNormal:(SKTexture *)normal selected:(SKTexture *)selected;
+- (instancetype)initWithTextureNormal:(SKTexture *)normal selected:(SKTexture *)selected disabled:(SKTexture *)disabled; // Designated Initializer
 
-- (id)initWithImageNamedNormal:(NSString *)normal selected:(NSString *)selected;
-- (id)initWithImageNamedNormal:(NSString *)normal selected:(NSString *)selected disabled:(NSString *)disabled;
+- (instancetype)initWithImageNamedNormal:(NSString *)normal selected:(NSString *)selected;
+- (instancetype)initWithImageNamedNormal:(NSString *)normal selected:(NSString *)selected disabled:(NSString *)disabled;
 
 /** Sets the target-action pair, that is called when the Button is tapped.
  "target" won't be retained.
@@ -35,5 +37,7 @@
 - (void)setTouchUpInsideTarget:(id)target action:(SEL)action;
 - (void)setTouchDownTarget:(id)target action:(SEL)action;
 - (void)setTouchUpTarget:(id)target action:(SEL)action;
+
+
 
 @end

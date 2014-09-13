@@ -13,8 +13,10 @@
 	NSArray *_frames;
 }
 
--(id)init {
+-(id)initWithSize:(CGSize)size {
     if(self = [super initWithSpriteImageName:@"aPage"]) {
+		// flipping width <-> height due orientation
+		theSize = CGSizeMake(size.height, size.width);
 
 		theModel = [[joiModel alloc] init];
 		NSLog(@"...%@", [theModel bookProperty:@"title" withBookID:0]);
@@ -23,7 +25,7 @@
 
 		myLabel.text = @"Hello, World!";
 		myLabel.fontSize = 30;
-//		myLabel.position = CGPointMake(midX, midY);
+		myLabel.position = CGPointMake(theSize.width/2, theSize.height/2);
 
 		[self addChild:myLabel];
 

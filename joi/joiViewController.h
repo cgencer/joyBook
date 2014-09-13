@@ -18,11 +18,9 @@
 	NSMutableArray* viewControllerArray;
 	NSArray *_locations;
 	NSData *data;
-//	BOOL *didPresentScene;
 	joiCollection* _bookSet;
 }
 
 @property(nonatomic, weak)joiScene *scene;
-@property(nonatomic, weak)UIView *clearContentView;
-@property(nonatomic)CGSize screenDimensions;
+
 @end

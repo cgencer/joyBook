@@ -7,13 +7,12 @@
 //
 
 #import "joiLevels.h"
-#import "joiButton.h"
-#import "joiBook.h"
-#import "joiMenuItem.h"
 
 @implementation joiLevels
--(id)initWithSize:(CGSize)theSize {
+-(id)initWithSize:(CGSize)size {
     if(self = [super initWithSpriteImageName:@"levels"]) {
+		// flipping width <-> height due orientation
+		theSize = CGSizeMake(size.height, size.width);
 		theModel = [[joiModel alloc] init];
 
 		for (NSInteger *i = 0; i < (NSInteger*) theModel.totalBooks; i++) {
@@ -23,12 +22,15 @@
 //			(id) *_prop = [theModel bookProperty:@"title" withBookID:i];
 		}
 
-		joiButton *backButton = [[joiButton alloc] initWithImageNamedNormal:@"buttonNormal" selected:@"buttonSelected"];
-		[backButton setPosition:CGPointMake(100, 100)];
-		[backButton.title setText:@"Button"];
-		[backButton.title setFontName:@"Chalkduster"];
-		[backButton.title setFontSize:20.0];
-		[backButton setTouchUpInsideTarget:self action:@selector(buttonAction)];
+		SKBButtonNode *backButton = [[SKBButtonNode alloc] initWithImageNamedNormal:@"buttonNormal" selected:@"buttonSelected"];
+	    CGRect layerSize = [backButton calculateAccumulatedFrame];
+	    NSLog(@"#### %i x %i", (int)theSize.width, (int)theSize.height);
+
+		backButton.position = CGPointMake(layerSize.size.width/3, layerSize.size.height/3);
+//		[backButton.title setText:@"Button"];
+//		[backButton.title setFontName:@"Chalkduster"];
+//		[backButton.title setFontSize:20.0];
+//		[backButton setTouchUpInsideTarget:self action:@selector(buttonAction)];
 		[self addChild:backButton];
 	}
 	return self;

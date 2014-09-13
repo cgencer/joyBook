@@ -1,45 +1,52 @@
 //
-//  joiButton.m
-//  joi
+//  SKBButtonNode.m
+//  Legacy Assault
 //
-//  Created by Cem Gencer on 8.09.2014.
-//  Copyright (c) 2014 Cem Gencer. All rights reserved.
+//  Created by Dmitry Volevodz on 24/03/14.
+//  Copyright (c) 2014 Dmitry Volevodz. All rights reserved.
 //
 
-#import "joiButton.h"
-#import <objc/message.h>
+//
+//
+//  Courtesy of Graf on Stack Overflow
+//
+//
+//
 
-@implementation joiButton
+#import "SKBButtonNode.h"
+
+@implementation SKBButtonNode
 
 #pragma mark Texture Initializer
 
 /**
  * Override the super-classes designated initializer, to get a properly set SKButton in every case
  */
-- (id)initWithTexture:(SKTexture *)texture color:(UIColor *)color size:(CGSize)size {
+- (instancetype)initWithTexture:(SKTexture *)texture color:(UIColor *)color size:(CGSize)size {
     return [self initWithTextureNormal:texture selected:nil disabled:nil];
 }
 
-- (id)initWithTextureNormal:(SKTexture *)normal selected:(SKTexture *)selected {
+- (instancetype)initWithTextureNormal:(SKTexture *)normal selected:(SKTexture *)selected {
     return [self initWithTextureNormal:normal selected:selected disabled:nil];
 }
 
 /**
  * This is the designated Initializer
  */
-- (id)initWithTextureNormal:(SKTexture *)normal selected:(SKTexture *)selected disabled:(SKTexture *)disabled {
-    if (self = [super initWithTexture:normal color:[UIColor whiteColor] size:normal.size]) {
+- (instancetype)initWithTextureNormal:(SKTexture *)normal selected:(SKTexture *)selected disabled:(SKTexture *)disabled {
+    self = [super initWithTexture:normal color:[UIColor whiteColor] size:normal.size];
+    if (self) {
         [self setNormalTexture:normal];
         [self setSelectedTexture:selected];
         [self setDisabledTexture:disabled];
         [self setIsEnabled:YES];
         [self setIsSelected:NO];
-		
-        _title = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
-        [_title setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
-        [_title setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
-		
-        [self addChild:_title];
+        
+        //_title = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
+        //[_title setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
+        //[_title setHorizontalAlignmentMode:SKLabelHorizontalAlignmentModeCenter];
+        
+        //[self addChild:_title];
         [self setUserInteractionEnabled:YES];
     }
     return self;
@@ -47,30 +54,28 @@
 
 #pragma mark Image Initializer
 
-- (id)initWithImageNamedNormal:(NSString *)normal selected:(NSString *)selected {
+- (instancetype)initWithImageNamedNormal:(NSString *)normal selected:(NSString *)selected {
     return [self initWithImageNamedNormal:normal selected:selected disabled:nil];
 }
 
-- (id)initWithImageNamedNormal:(NSString *)normal selected:(NSString *)selected disabled:(NSString *)disabled {
+- (instancetype)initWithImageNamedNormal:(NSString *)normal selected:(NSString *)selected disabled:(NSString *)disabled {
     SKTexture *textureNormal = nil;
     if (normal) {
         textureNormal = [SKTexture textureWithImageNamed:normal];
     }
-	
+    
     SKTexture *textureSelected = nil;
     if (selected) {
         textureSelected = [SKTexture textureWithImageNamed:selected];
     }
-	
+    
     SKTexture *textureDisabled = nil;
     if (disabled) {
         textureDisabled = [SKTexture textureWithImageNamed:disabled];
     }
-	
+    
     return [self initWithTextureNormal:textureNormal selected:textureSelected disabled:textureDisabled];
 }
-
-
 
 
 #pragma -
@@ -87,6 +92,12 @@
 }
 
 - (void)setTouchUpTarget:(id)target action:(SEL)action {
+    _targetTouchUp = target;
+    _actionTouchUp = action;
+}
+
+- (void)setToggleTarget:(id)target action:(SEL)action
+{
     _targetTouchUp = target;
     _actionTouchUp = action;
 }
@@ -110,8 +121,10 @@
     if ([self selectedTexture] && [self isEnabled]) {
         if (_isSelected) {
             [self setTexture:_selectedTexture];
+          //  self.title.fontColor = [UIColor darkGrayColor];
         } else {
             [self setTexture:_normalTexture];
+         //   self.title.fontColor = [UIColor whiteColor];
         }
     }
 }
@@ -125,7 +138,9 @@
  */
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     if ([self isEnabled]) {
-        objc_msgSend(_targetTouchDown, _actionTouchDown);
+        if (_actionTouchDown){
+            [_targetTouchDown performSelectorOnMainThread:_actionTouchDown withObject:self waitUntilDone:YES];
+        }
         [self setIsSelected:YES];
     }
 }
@@ -139,7 +154,7 @@
     if ([self isEnabled]) {
         UITouch *touch = [touches anyObject];
         CGPoint touchPoint = [touch locationInNode:self.parent];
-		
+        
         if (CGRectContainsPoint(self.frame, touchPoint)) {
             [self setIsSelected:YES];
         } else {
@@ -155,12 +170,15 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     CGPoint touchPoint = [touch locationInNode:self.parent];
-	
+    
     if ([self isEnabled] && CGRectContainsPoint(self.frame, touchPoint)) {
-        objc_msgSend(_targetTouchUpInside, _actionTouchUpInside);
-    } else {
-		[self setIsSelected:NO];
+        if (_actionTouchUpInside){
+            [_targetTouchUpInside performSelectorOnMainThread:_actionTouchUpInside withObject:self waitUntilDone:YES];
+        }
     }
-    objc_msgSend(_targetTouchUp, _actionTouchUp);
+    [self setIsSelected:NO];
+    if (_actionTouchUp){
+        [_targetTouchUp performSelectorOnMainThread:_actionTouchUp withObject:self waitUntilDone:YES];
+    }
 }
 @end

@@ -24,22 +24,24 @@ static NSString * kViewTransformChanged = @"view transform changed";
 - (void)viewWillLayoutSubviews
 {
 	[super viewWillLayoutSubviews];
-// Configure the view.
+
 	SKView *skView = (SKView *)self.view;
 	if (!skView.scene) {
 		skView.showsFPS = YES;
 		skView.showsNodeCount = YES;
-// Create and configure the scene.
-		SKScene *scene = [joiScene sceneWithSize:skView.bounds.size];
-		scene.scaleMode = SKSceneScaleModeAspectFill;
+
+		SKScene *scene = [joiScene sceneWithSize:
+						  CGSizeMake(skView.bounds.size.width, skView.bounds.size.height)];
+		scene.scaleMode = SKSceneScaleModeAspectFill; //	SKSceneScaleModeResizeFill
+		NSLog(@"SIZEIS: %i x %i", (int)skView.bounds.size.height, (int)skView.bounds.size.width);
 		NSLog(@"ANCHOR: %i x %i", (int)scene.anchorPoint.x, (int)scene.anchorPoint.x);
-// Present the scene.
-//        scene.position = CGPointMake(-CGRectGetMidX(skView.bounds), -CGRectGetMidY(skView.bounds));
+
+		//        scene.position = CGPointMake(-CGRectGetMidX(skView.bounds), -CGRectGetMidY(skView.bounds));
 
 		[skView presentScene:scene];
 
 // PREPARE PAGES
-/*		
+/*		≥
 			NSUInteger numberOfPages = 10;
 			viewControllerArray = [[NSMutableArray alloc] initWithCapacity:numberOfPages];
 	
@@ -69,14 +71,6 @@ static NSString * kViewTransformChanged = @"view transform changed";
 - (void)viewDidLoad {
 	[super viewDidLoad];
 }
-
-	
-
-
-
-
-
-
 /*	
 	// MOVE NEXT
 	UIButton*btn_moveForward = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -159,15 +153,6 @@ static NSString * kViewTransformChanged = @"view transform changed";
 	return FALSE;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
-{
-	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-		return UIInterfaceOrientationMaskAllButUpsideDown;
-	} else {
-		return UIInterfaceOrientationMaskAll;
-	}
-}
-
 #pragma mark - KVO
 
 -(void)observeValueForKeyPath:(NSString *)keyPath
@@ -187,9 +172,7 @@ static NSString * kViewTransformChanged = @"view transform changed";
 
 -(void)dealloc
 {
-    @try {
- //       [self.clearContentView removeObserver:self forKeyPath:@"transform"];
-    }
+    @try {	}
     @catch (NSException *exception) {    }
     @finally {    }
 }
