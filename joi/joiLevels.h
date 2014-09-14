@@ -11,6 +11,7 @@
 #import "joiPage.h"
 #import "joiBook.h"
 #import "joiMenuItem.h"
+#import "joiAnimButton.h"
 
 @interface joiLevels : joiPage {
 	CGSize theSize;

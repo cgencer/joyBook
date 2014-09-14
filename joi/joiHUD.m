@@ -10,12 +10,8 @@
 
 @implementation joiHUD
 
--(id)initWithSize:(CGSize)size {
-    if(self = [super initWithSpriteImageName:@"backButton"]) {
-		// flipping width <-> height due orientation
-		theSize = CGSizeMake(size.height, size.width);
-		NSLog(@"joiHUD::::> %i x %i",
-			  (int)theSize.width, (int)theSize.height);
+-(id)init {
+    if(self = [super init]) {
         [self addChild: [self backButtonNode]];
 	}
 	return self;
@@ -25,9 +21,7 @@
 {
     SKBButtonNode *buttonBack = [SKBButtonNode spriteNodeWithImageNamed:@"backbutton.png"];
     CGRect layerSize = [buttonBack calculateAccumulatedFrame];
-    NSLog(@"#### %i x %i", (int)theSize.width, (int)theSize.height);
-    buttonBack.position = CGPointMake(layerSize.size.width / 2, layerSize.size.height / 2);
-    //CGPointMake(theSize.width/2, theSize.height/2);
+    buttonBack.position = CGPointMake(layerSize.size.width/2, layerSize.size.height/2);
     buttonBack.name = @"backButton";
     buttonBack.zPosition = 1.0;
 	return buttonBack;

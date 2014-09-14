@@ -13,7 +13,6 @@
 	CGSize theSize;
 }
 
--(id)initWithSize:(CGSize)theSize;
 - (SKSpriteNode *)backButtonNode;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 

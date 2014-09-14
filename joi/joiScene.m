@@ -13,6 +13,10 @@
 
 -(id)initWithSize:(CGSize)size {
 	if (self = [super initWithSize:size]) {
+		self.gameState = kGameStateRunning;
+
+		NSLog(@"SCENE>Size: %@", NSStringFromCGSize(size));
+
 //		joiCore *jCore = [[joiCore alloc] init];
 //		jCore.delegate = self;
 //		[jCore helloDelegate:size];
@@ -38,13 +42,13 @@
 		[self addChild:_layerHUD];
 		_layerHUD.zPosition = 4;
 
-		joiPage *levelSelectionPage = [joiLevels new];
+		joiPage *levelSelectionPage = [[joiLevels alloc] initWithSize:size];
 		[_layerEntrance addChild:levelSelectionPage];
 
 		joiPage *aPage = [joiFirstPage new];
 		[_layerForeground addChild:aPage];
 
-		joiPage *hudPage = [[joiHUD alloc] initWithSize:size];
+		joiPage *hudPage = [[joiHUD alloc] init];
 		[_layerHUD addChild:hudPage];
 	}
 	return self;
@@ -56,5 +60,8 @@
 
 -(void)update:(CFTimeInterval)currentTime {
 	/* Called before each frame is rendered */
+	if (self.gameState != kGameStateRunning) {
+        return;
+    }
 }
 @end

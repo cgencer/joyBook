@@ -14,9 +14,15 @@
 @property (strong, nonatomic) NSString *theName;
 @property (assign, nonatomic) CGSize theSize;
 
--(id)initWithSize:(CGSize)size named:(NSString*)name andStill:(NSString*)still fromAtlas:(NSString*)atlas;
--(SKSpriteNode *)doButton:(NSString*)stillFrame fromAtlas:(NSString*)buttonAtlas;
+-(id)initWithSize:(CGSize)size
+			named:(NSString*)name
+		fromAtlas:(NSString*)atlas;
+
+-(SKSpriteNode *)doButton:(NSString*)stillFrame
+			withFrameName:(NSString*)frameName;
+
++(NSUInteger) getBookID;
 -(void)selectBook:(int)selectedBookID;
--(void)animatedButton;
+-(void)animateButton;
 
 @end

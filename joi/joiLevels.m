@@ -9,29 +9,29 @@
 #import "joiLevels.h"
 
 @implementation joiLevels
+
 -(id)initWithSize:(CGSize)size {
     if(self = [super initWithSpriteImageName:@"levels"]) {
-		// flipping width <-> height due orientation
-		theSize = CGSizeMake(size.height, size.width);
+
+//		[[SKMusicPlayer musicPlayer] playWithMusicName:@"bg" musicType:@"mp3"];
+
+		theSize = size;
 		theModel = [[joiModel alloc] init];
 
-		for (NSInteger *i = 0; i < (NSInteger*) theModel.totalBooks; i++) {
+		NSLog(@">:>: %i", theModel.totalBooks);
+		for (int i = 0; i < (int) theModel.totalBooks; i++) {
 
-//			joiMenuItem *_menuItem = [theModel bookProperty:@"menuitem" withBookID:i];
-//			NSLog(@"the item %i: %@", i, [_menuItem class]);
-//			(id) *_prop = [theModel bookProperty:@"title" withBookID:i];
+			joiAnimButton *aB = [[joiAnimButton alloc] initWithSize:theSize
+															  named:@"levelButton1"
+														  fromAtlas:@"button"];
+			aB.position = CGPointMake((CGFloat)i * 200, 100);
+			[self addChild:aB];
 		}
 
-		SKBButtonNode *backButton = [[SKBButtonNode alloc] initWithImageNamedNormal:@"buttonNormal" selected:@"buttonSelected"];
-	    CGRect layerSize = [backButton calculateAccumulatedFrame];
-	    NSLog(@"#### %i x %i", (int)theSize.width, (int)theSize.height);
-
-		backButton.position = CGPointMake(layerSize.size.width/3, layerSize.size.height/3);
 //		[backButton.title setText:@"Button"];
 //		[backButton.title setFontName:@"Chalkduster"];
 //		[backButton.title setFontSize:20.0];
 //		[backButton setTouchUpInsideTarget:self action:@selector(buttonAction)];
-		[self addChild:backButton];
 	}
 	return self;
 }

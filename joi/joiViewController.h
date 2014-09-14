@@ -13,7 +13,7 @@
 #import "joiCollection.h"
 #import "joiScene.h"
 
-@interface joiViewController : UIViewController<UIScrollViewDelegate, DMLazyScrollViewDelegate> {
+@interface joiViewController : UIViewController {
 	DMLazyScrollView* bookPagesScrollView;
 	NSMutableArray* viewControllerArray;
 	NSArray *_locations;

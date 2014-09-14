@@ -54,6 +54,7 @@
 		14F5AEDD19C3026F000BADF9 /* SKNode+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F5AED419C3026F000BADF9 /* SKNode+Shake.m */; };
 		14F5AEDE19C3026F000BADF9 /* SKTextureAtlas+NearestFiltering.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F5AED619C3026F000BADF9 /* SKTextureAtlas+NearestFiltering.m */; };
 		14F5AEDF19C3026F000BADF9 /* SKUMultiLineLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F5AED819C3026F000BADF9 /* SKUMultiLineLabelNode.m */; };
+		14F5AEE919C4F74B000BADF9 /* button.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 14F5AEE819C4F74B000BADF9 /* button.atlas */; };
 		14F60C4A19BE50300008E019 /* joiAnimButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F60C4919BE50300008E019 /* joiAnimButton.m */; };
 		89F18F1A09384156BA55B6CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4417D9FC206496199DCCA17 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -141,6 +142,7 @@
 		14F5AED619C3026F000BADF9 /* SKTextureAtlas+NearestFiltering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTextureAtlas+NearestFiltering.m"; sourceTree = "<group>"; };
 		14F5AED719C3026F000BADF9 /* SKUMultiLineLabelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKUMultiLineLabelNode.h; sourceTree = "<group>"; };
 		14F5AED819C3026F000BADF9 /* SKUMultiLineLabelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKUMultiLineLabelNode.m; sourceTree = "<group>"; };
+		14F5AEE819C4F74B000BADF9 /* button.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = button.atlas; sourceTree = "<group>"; };
 		14F60C4819BE50300008E019 /* joiAnimButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiAnimButton.h; sourceTree = "<group>"; };
 		14F60C4919BE50300008E019 /* joiAnimButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiAnimButton.m; sourceTree = "<group>"; };
 		A53D6200C3804005A1DE4107 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				14CC4C2219C03E8D00E188C8 /* backbutton.png */,
 				148FC52319BDB9D30064EB80 /* bookOne.bundle */,
 				140C59EF19B87D5500170ED3 /* Main.storyboard */,
+				14F5AEE819C4F74B000BADF9 /* button.atlas */,
 				140C599B19B853E500170ED3 /* dove.atlas */,
 				140C599219B79E4000170ED3 /* back.png */,
 				140C599319B79E4000170ED3 /* stage.png */,
@@ -406,6 +409,7 @@
 				14F5AEDA19C3026F000BADF9 /* LICENSE in Resources */,
 				14B6916319AB62D600C8B6E0 /* InfoPlist.strings in Resources */,
 				140C599419B79E4000170ED3 /* back.png in Resources */,
+				14F5AEE919C4F74B000BADF9 /* button.atlas in Resources */,
 				14CC4C2319C03E8D00E188C8 /* backbutton.png in Resources */,
 				14AF045119B5DC04005B9495 /* set.json in Resources */,
 				14F5AEDB19C3026F000BADF9 /* README.md in Resources */,

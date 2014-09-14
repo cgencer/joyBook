@@ -14,6 +14,12 @@
 #import "joiFirstPage.h"
 #import "joiLevels.h"
 
+typedef enum {
+    kGameStateRunning = 0,
+    kGameStateGameOver,
+    kGameStatePause
+} GameState;
+
 @interface joiScene : SKScene {
 	SKNode *_layerEntrance;
 	SKNode *_layerBackground;
@@ -21,6 +27,8 @@
 	SKNode *_layerForeground;
 	SKNode *_layerHUD;
 }
+
+@property (nonatomic) GameState gameState;
 
 -(id)initWithSize:(CGSize)size;
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
