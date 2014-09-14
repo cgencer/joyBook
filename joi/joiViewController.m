@@ -32,14 +32,11 @@ static NSString * kViewTransformChanged = @"view transform changed";
 		SKScene *scene = [joiScene sceneWithSize:skView.bounds.size];
 		NSLog(@"JOIVC>Size: %@", NSStringFromCGSize(skView.bounds.size));
 
-		scene.scaleMode = SKSceneScaleModeAspectFill; //	SKSceneScaleModeResizeFill
-
-		//        scene.position = CGPointMake(-CGRectGetMidX(skView.bounds), -CGRectGetMidY(skView.bounds));
+		scene.scaleMode = SKSceneScaleModeAspectFill;
 
 		[skView presentScene:scene];
 	}
 }
-
 
 - (UIImage*)loadImage
 {

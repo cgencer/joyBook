@@ -10,21 +10,35 @@
 
 @implementation joiHUD
 
--(id)init {
+-(id)initWithSize:(CGSize)size {
     if(self = [super init]) {
+		theSize = size;
         [self addChild: [self backButtonNode]];
 	}
 	return self;
 }
 
-- (SKSpriteNode *)backButtonNode
+- (SKSpriteButtonNode *)backButtonNode
 {
+/*
     SKBButtonNode *buttonBack = [SKBButtonNode spriteNodeWithImageNamed:@"backbutton.png"];
     CGRect layerSize = [buttonBack calculateAccumulatedFrame];
-    buttonBack.position = CGPointMake(layerSize.size.width/2, layerSize.size.height/2);
+    buttonBack.position = CGPointMake(layerSize.size.width/2, theSize.height - layerSize.size.height/2);
     buttonBack.name = @"backButton";
     buttonBack.zPosition = 1.0;
-	return buttonBack;
+*/
+	SKSpriteButtonNode *backButton = [SKSpriteButtonNode
+				 buttonNodeWithNormalTexture:[SKTexture textureWithImageNamed:@"backbutton.png"]
+				 highlightedTexture:[SKTexture textureWithImageNamed:@"backbutton.png"]
+				 block:^(id buttonNode, BOOL highlighted) {
+
+				 }];
+    CGRect layerSize = [backButton calculateAccumulatedFrame];
+    backButton.position = CGPointMake(layerSize.size.width/2, theSize.height - layerSize.size.height/2);
+    backButton.name = @"backButton";
+    backButton.zPosition = 1.0;
+	
+	return backButton;
 }
 
 //handle touch events

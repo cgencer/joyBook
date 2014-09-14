@@ -45,7 +45,7 @@ static NSUInteger bookID = 0;
 					 }];
 		theButton.name = theName;
 		theButton.zPosition = 1;
-		theButton.position = skp(theSize.width / 2, theSize.height / 2);
+		theButton.anchorPoint = CGPointMake(0, 0);
 
 		[self addChild:theButton];
 

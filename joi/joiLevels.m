@@ -19,19 +19,15 @@
 		theModel = [[joiModel alloc] init];
 
 		NSLog(@">:>: %i", theModel.totalBooks);
-		for (int i = 0; i < (int) theModel.totalBooks; i++) {
+		for (int i = 0; i < (int) 5; i++) {
 
 			joiAnimButton *aB = [[joiAnimButton alloc] initWithSize:theSize
 															  named:@"levelButton1"
 														  fromAtlas:@"button"];
-			aB.position = CGPointMake((CGFloat)i * 200, 100);
+			
+			aB.position = CGPointMake((CGFloat) (i*200) + (20*i) + 20, theSize.height/2);
 			[self addChild:aB];
 		}
-
-//		[backButton.title setText:@"Button"];
-//		[backButton.title setFontName:@"Chalkduster"];
-//		[backButton.title setFontSize:20.0];
-//		[backButton setTouchUpInsideTarget:self action:@selector(buttonAction)];
 	}
 	return self;
 }

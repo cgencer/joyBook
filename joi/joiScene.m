@@ -45,10 +45,10 @@
 		joiPage *levelSelectionPage = [[joiLevels alloc] initWithSize:size];
 		[_layerEntrance addChild:levelSelectionPage];
 
-		joiPage *aPage = [joiFirstPage new];
+		joiPage *aPage = [[joiFirstPage alloc] initWithSize:size];
 		[_layerForeground addChild:aPage];
 
-		joiPage *hudPage = [[joiHUD alloc] init];
+		joiPage *hudPage = [[joiHUD alloc] initWithSize:size];
 		[_layerHUD addChild:hudPage];
 	}
 	return self;

@@ -16,7 +16,8 @@
 -(id)initWithSize:(CGSize)size {
     if(self = [super initWithSpriteImageName:@"aPage"]) {
 		// flipping width <-> height due orientation
-		theSize = CGSizeMake(size.height, size.width);
+//		theSize = CGSizeMake(size.height, size.width);
+		theSize = size;
 
 		theModel = [[joiModel alloc] init];
 		NSLog(@"...%@", [theModel bookProperty:@"title" withBookID:0]);
@@ -42,7 +43,7 @@
 		
 		SKTexture *temp = _frames[0];
 		_dove = [SKSpriteNode spriteNodeWithTexture:temp];
-//		_dove.position = CGPointMake(midX, midY);
+		_dove.position = CGPointMake(size.width/2, size.height/2);
 		
 		[self addChild:_dove];
 		[self flyingDove];

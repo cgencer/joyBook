@@ -6,14 +6,15 @@
 //  Copyright (c) 2014 Cem Gencer. All rights reserved.
 //
 
+#import <SpriteKit/SpriteKit.h>
+#import "Spritekit-Helper.h"
 #import "joiPage.h"
-#import "SKBButtonNode.h"
 
 @interface joiHUD : joiPage {
 	CGSize theSize;
 }
 
-- (SKSpriteNode *)backButtonNode;
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+-(id)initWithSize:(CGSize)theSize;
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 
 @end
