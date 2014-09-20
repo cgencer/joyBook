@@ -26,7 +26,7 @@
 
 		myLabel.text = @"Hello, World!";
 		myLabel.fontSize = 30;
-		myLabel.position = CGPointMake(theSize.width/2, theSize.height/2);
+		myLabel.position = CGPointMake(theSize.width/2, theSize.height/2-100);
 
 		[self addChild:myLabel];
 

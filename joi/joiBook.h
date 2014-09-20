@@ -15,12 +15,12 @@
 @interface joiBook : JSONModel
 
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) joiMenuItem *menuItem;
-@property (strong, nonatomic) NSString<Optional> *orientation;	// PORTRAIT, def: LANDSCAPE
+@property (strong, nonatomic) NSArray<joiMenuItem> *menuItem;
 @property (strong, nonatomic) NSString *stage;
 @property (strong, nonatomic) NSString<Optional>* audio;
 @property (strong, nonatomic) NSString<Optional>* backPic;
 @property (strong, nonatomic) NSArray<joiAnim, ConvertOnDemand>* backAnim;
 @property (strong, nonatomic) NSArray<joiAnim, ConvertOnDemand>* actions;
+@property (strong, nonatomic) NSString<Optional> *orientation;	// PORTRAIT, def: LANDSCAPE
 
 @end

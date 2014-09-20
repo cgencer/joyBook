@@ -7,8 +7,6 @@
 //
 
 #import "joiViewController.h"
-#import "JSONModelLib.h"
-#import "joiScene.h"
 
 #define ARC4RANDOM_MAX	0x100000000
 static NSString * kViewTransformChanged = @"view transform changed";
@@ -25,16 +23,15 @@ static NSString * kViewTransformChanged = @"view transform changed";
 	[super viewWillLayoutSubviews];
 
 	SKView *skView = (SKView *)self.view;
-	if (!skView.scene) {
+	if (!self.theScene) {
 		skView.showsFPS = YES;
 		skView.showsNodeCount = YES;
+		self.theScene = [[joiScene alloc] initWithSize:self.spriteKitView.frame.size];
+		NSLog(@"JOIVC>Size: %@", NSStringFromCGSize(self.spriteKitView.frame.size));
 
-		SKScene *scene = [joiScene sceneWithSize:skView.bounds.size];
-		NSLog(@"JOIVC>Size: %@", NSStringFromCGSize(skView.bounds.size));
-
-		scene.scaleMode = SKSceneScaleModeAspectFill;
-
-		[skView presentScene:scene];
+		[self.theScene deviceConfig:[self checkRetina]];
+		self.theScene.scaleMode = SKSceneScaleModeAspectFill;
+		[skView presentScene:self.theScene];
 	}
 }
 
@@ -46,6 +43,24 @@ static NSString * kViewTransformChanged = @"view transform changed";
 	UIImage* image = [UIImage imageWithContentsOfFile:path];
 	return image;
 }
+
+// 0 for standard resolution iPhone/iPod touch
+// 1 for retina iPhone
+// 2 for standard resolution iPad
+// 3 for retina iPad.
+- (int)checkRetina
+{
+    int d = 0; // standard display
+	if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] && [[UIScreen mainScreen] scale] == 2.0)
+	{
+		d = 1; // is retina display
+	}
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+		d += 2;
+	}
+	return d;
+}
+
 - (BOOL)shouldAutorotate
 {
     return YES;

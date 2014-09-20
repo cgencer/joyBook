@@ -8,19 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
-#import "DMLazyScrollView.h"
+#import "PIOScrollSceneViewController.h"
 #import "JSONModelLib.h"
 #import "joiCollection.h"
 #import "joiScene.h"
 
-@interface joiViewController : UIViewController {
-	DMLazyScrollView* bookPagesScrollView;
+@interface joiViewController : PIOScrollSceneViewController {
 	NSMutableArray* viewControllerArray;
 	NSArray *_locations;
 	NSData *data;
 	joiCollection* _bookSet;
 }
 
-@property(nonatomic, weak)joiScene *scene;
+@property (nonatomic, strong) joiScene *theScene;
+
+- (int)checkRetina;
 
 @end

@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-PIOSpriteKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-STTwitter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A3201B7CA8146B5971ED8CA</key>
+		<key>1D8279CDA914402384DA5FD9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C44856970364A52A7B70334</key>
+		<key>3B0C8324BC9D41409F974E05</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D306E00AB464B25A4E58907</key>
+		<key>4F6763E8948041EB80EFD5A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E1D10B04468485490EFD5FD</key>
+		<key>63A500FC32CA45D9B841918E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9B9AF152BE994FBD88A9E92D</key>
+		<key>78512617AA01433A8907F9D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E6C4C1F45547437497A0680B</key>
+		<key>9E47E8C45B604DC1B54D01DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC789258C3D641F4B4B5ED81</key>
+		<key>BC2BA38EF4B84D03A322F55F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F15B27D533AC4D8CB95B2363</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -21,17 +21,15 @@
 		NSLog(@">:>: %i", theModel.totalBooks);
 		for (int i = 0; i < (int) 5; i++) {
 
-			joiAnimButton *aB = [[joiAnimButton alloc] initWithSize:theSize
-															  named:@"levelButton1"
-														  fromAtlas:@"button"];
-			
-			aB.position = CGPointMake((CGFloat) (i*200) + (20*i) + 20, theSize.height/2);
-			[self addChild:aB];
+			[self addChild: [[joiAnimButton alloc]
+									initWithSize:theSize
+										   named:[NSString stringWithFormat:@"levelButton_%d", i]
+										position:CGPointMake((CGFloat)
+														(i*160) + (35*i) + 7 + 35, theSize.height/2)
+									   fromAtlas:@"button"]];
 		}
 	}
 	return self;
 }
 
--(void)buttonAction {
-}
 @end

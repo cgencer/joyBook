@@ -13,7 +13,7 @@
 @property (nonatomic) CGSize contentSize;
 @property (nonatomic) SKSpriteNode *contentView;
 
-- (instancetype)initWithFrame:(CGRect )frame;
+- (instancetype)initWithFrame:(CGRect)frame;
 
 - (void)scrollToTop;
 

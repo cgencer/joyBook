@@ -1,14 +1,14 @@
 //
-//  joiHUD.m
+//  joiIntro.m
 //  joi
 //
-//  Created by Cem Gencer on 8.09.2014.
+//  Created by Cem Gencer on 17.09.2014.
 //  Copyright (c) 2014 Cem Gencer. All rights reserved.
 //
 
-#import "joiHUD.h"
+#import "joiIntro.h"
 
-@implementation joiHUD
+@implementation joiIntro
 
 -(id)initWithSize:(CGSize)size {
     if(self = [super init]) {
@@ -21,11 +21,11 @@
 - (SKSpriteButtonNode *)backButtonNode
 {
 	SKSpriteButtonNode *backButton = [SKSpriteButtonNode
-				 buttonNodeWithNormalTexture:[SKTexture textureWithImageNamed:@"backbutton.png"]
-				 highlightedTexture:[SKTexture textureWithImageNamed:@"backbutton.png"]
-				 block:^(id buttonNode, BOOL highlighted) {
-					 NSLog(@"clicked");
-				 }];
+									  buttonNodeWithNormalTexture:[SKTexture textureWithImageNamed:@"backbutton.png"]
+									  highlightedTexture:[SKTexture textureWithImageNamed:@"backbutton.png"]
+									  block:^(id buttonNode, BOOL highlighted) {
+										  NSLog(@"clicked");
+									  }];
     CGRect layerSize = [backButton calculateAccumulatedFrame];
     backButton.position = CGPointMake(layerSize.size.width/2, theSize.height - layerSize.size.height/2);
     backButton.name = @"backButton";

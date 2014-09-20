@@ -18,6 +18,7 @@ PODS:
   - Facebook-iOS-SDK (3.17.0):
     - Bolts
   - JSONModel (1.0.1)
+  - PIOSpriteKit (0.1.0)
   - SpriteKit-Helper (0.0.3)
   - STTwitter (0.1.4)
 
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - BlocksKit (~> 2.2.5)
   - Facebook-iOS-SDK
   - JSONModel
+  - PIOSpriteKit
   - SpriteKit-Helper
   - STTwitter
 
@@ -33,6 +35,7 @@ SPEC CHECKSUMS:
   Bolts: 2635e8698a630774689441047f3465d78c48d485
   Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
   JSONModel: 634100aaacbd89811bc8a03da209356e5989c569
+  PIOSpriteKit: b0e1fb1ecc1357ed2f6571ac5189a2d4053675d4
   SpriteKit-Helper: 35522e786c7057a0df007bb91da9653f02c0ad1e
   STTwitter: 809f63f856341fdd103fbc6d9e4818d48a91be0c
 

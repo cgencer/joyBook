@@ -1,7 +1,7 @@
 {
 	"bookSet": [{
 		"title": "test ismi",
-		"menuItem": {
+		"menuItem": [{
 			"interval": 20,
 			"pause": 1000,
 			"frames": [
@@ -21,7 +21,7 @@
 					"image": "dove7"
 				}
 			]
-		},
+		}],
 		"stage": "stage",
 		"audio": "",
 		"backPic": "back",
@@ -59,6 +59,7 @@
 				"type": "TOUCH",
 				"tween": "LINEAR",
 				"chained": false,
+				"next": "NONE",
 				"pauseBegin": 4500,
 				"pauseEnd": 4500,
 				"startpos": {
@@ -92,6 +93,7 @@
 				],
 				"audio": "ses.caf"
 			}
-		]
+		],
+		"orientation": "LANDSCAPE"
 	}]
 }

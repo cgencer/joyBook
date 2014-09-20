@@ -16,13 +16,11 @@
 
 -(id)initWithSize:(CGSize)size
 			named:(NSString*)name
+		 position:(CGPoint)pos
 		fromAtlas:(NSString*)atlas;
 
--(SKSpriteNode *)doButton:(NSString*)stillFrame
-			withFrameName:(NSString*)frameName;
-
 +(NSUInteger) getBookID;
--(void)selectBook:(int)selectedBookID;
+-(void)selectBook:(NSUInteger*)selectedBookID;
 -(void)animateButton;
 
 @end

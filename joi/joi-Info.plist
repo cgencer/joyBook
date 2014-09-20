@@ -39,10 +39,8 @@
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<false/>
-	<key>NSMainNibFile~ipad</key>
-	<string>joiViewController_iPad</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>ScrollView</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

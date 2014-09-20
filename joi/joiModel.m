@@ -12,14 +12,12 @@
 
 #define defaultBookNum		0
 
-@implementation joiModel {
-	joiBook *theBook;
-	joiCollection *_collection;
-}
+@implementation joiModel
 
 @synthesize totalBooks;
 @synthesize activeBook;
 @synthesize activePage;
+@synthesize theBook;
 
 #pragma mark Singleton Methods
 
@@ -34,21 +32,18 @@
 
 -(id)init {
 	if (self = [super init]) {
-		activeBook = defaultBookNum;
-		theBook = [self selectBook:defaultBookNum];
+		activeBook = 0;
+		theBook = [self selectBook:0];
 	}
 	return self;
 }
 
--(joiBook*)selectBook:(NSInteger *)bookid
+-(joiBook*)selectBook:(NSUInteger)bookID
 {
-	if (bookid == nil) {
-		bookid = 0;
-	}
-	
-	NSString* setPath = [[NSBundle mainBundle] pathForResource:@"set" ofType:@"json"];
-	NSError* err = nil;
-	
+	NSError *err = nil;
+	NSString* setPath = [[NSBundle mainBundle]
+								pathForResource:@"set"
+										 ofType:@"json"];
 	NSString *jsonString = [NSString stringWithContentsOfFile:setPath
 													 encoding:NSUTF8StringEncoding
 														error:&err];
@@ -57,23 +52,29 @@
 	NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData
 															 options:NSJSONReadingMutableContainers
 															   error:&err];
-	
-	_collection = [[joiCollection alloc] initWithDictionary:jsonDict error:&err];
+	joiCollection *coll = [[joiCollection alloc]
+						   initWithDictionary:jsonDict
+						   error:nil];
+
 	if(err) {
-		NSLog(@"ERROR while initialising the bookset: %@", _collection);
+		NSLog(@"ERROR while initialising the bookset from collection: %@", coll);
+	}else{
+		NSArray *books = coll.bookSet;
+
+		totalBooks = [books count];
+		bookID = (bookID < totalBooks) ? bookID : defaultBookNum;
+		NSLog(@"book initialized... %tu", bookID);
+		
+		self.theBook = [books objectAtIndex:bookID];
+		NSLog(@"book initialized... %i", totalBooks);
 	}
-	
-	NSArray *books = _collection.bookSet;
-	totalBooks = [books count];
-	joiBook *_theBook = [books objectAtIndex:0];
-	NSLog(@"book initialized... %i", totalBooks);
-	return _theBook;
+	return self.theBook;
 }
 
--(id)bookProperty:(NSString *)selector withBookID:(NSInteger *)bookID
+-(id)bookProperty:(NSString *)selector withBookID:(NSUInteger)bookID
 {
-	NSInteger *bid = (bookID == nil) ? defaultBookNum : bookID;
-	theBook = [self selectBook:bid];
+NSLog(@"BID: %i", bookID);
+	theBook = [self selectBook:bookID];
 
 	return [theBook valueForKey:selector];
 
