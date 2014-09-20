@@ -17,7 +17,6 @@
 @synthesize totalBooks;
 @synthesize activeBook;
 @synthesize activePage;
-@synthesize theBook;
 
 #pragma mark Singleton Methods
 
@@ -52,23 +51,25 @@
 	NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData
 															 options:NSJSONReadingMutableContainers
 															   error:&err];
-	joiCollection *coll = [[joiCollection alloc]
-						   initWithDictionary:jsonDict
-						   error:nil];
+	coll = [[joiCollection alloc] initWithDictionary:jsonDict error:nil];
 
 	if(err) {
 		NSLog(@"ERROR while initialising the bookset from collection: %@", coll);
 	}else{
-		NSArray *books = coll.bookSet;
+		book = coll.book;
 
-		totalBooks = [books count];
-		bookID = (bookID < totalBooks) ? bookID : defaultBookNum;
-		NSLog(@"book initialized... %tu", bookID);
+		totalBooks = [book count];
+//		bookID = (bookID < totalBooks) ? bookID : defaultBookNum;
+//		NSLog(@"book initialized... %tu", bookID);
+
+		theBook = book[0];
 		
-		self.theBook = [books objectAtIndex:bookID];
-		NSLog(@"book initialized... %i", totalBooks);
+		if(theBook == nil) {
+			NSLog(@"error on theBook");
+		}
+		NSLog(@"book initialized... %i %@", totalBooks, book);
 	}
-	return self.theBook;
+	return theBook;
 }
 
 -(id)bookProperty:(NSString *)selector withBookID:(NSUInteger)bookID

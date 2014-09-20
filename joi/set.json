@@ -1,5 +1,5 @@
 {
-	"bookSet": [{
+	"book": [{
 		"title": "test ismi",
 		"menuItem": [{
 			"interval": 20,

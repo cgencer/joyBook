@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "joi/joiModel.m"
-            timestampString = "432892444.872702"
+            timestampString = "432900818.282316"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-bookProperty:withBookID:"
             landmarkType = "5">
          </BreakpointContent>
@@ -136,11 +136,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "joi/joiModel.m"
-            timestampString = "432889366.224844"
+            timestampString = "432900186.857729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-selectBook:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "joi/joiModel.m"
+            timestampString = "432900818.282316"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-selectBook:"
             landmarkType = "5">
          </BreakpointContent>
