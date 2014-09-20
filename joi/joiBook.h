@@ -8,14 +8,14 @@
 
 #import "JSONModel.h"
 #import "joiAnim.h"
-#import "joiMenuItem.h"
+#import "joiMenuCollection.h"
 
 @protocol joiBook @end
 
 @interface joiBook : JSONModel
 
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSArray<joiMenuItem> *menuItem;
+@property (strong, nonatomic) NSArray<joiMenuCollection, ConvertOnDemand> *menuCollection;
 @property (strong, nonatomic) NSString *stage;
 @property (strong, nonatomic) NSString<Optional>* audio;
 @property (strong, nonatomic) NSString<Optional>* backPic;
