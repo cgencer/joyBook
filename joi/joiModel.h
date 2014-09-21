@@ -11,7 +11,7 @@
 #import "joiCollection.h"
 
 @interface joiModel : NSObject {
-	NSArray *book;
+	NSArray *books;
 	joiCollection *coll;
 	joiBook *theBook;
 }
@@ -19,6 +19,7 @@
 @property (nonatomic, assign) NSUInteger totalBooks;
 @property (nonatomic, assign) NSUInteger activeBook;
 @property (nonatomic, assign) NSUInteger activePage;
+@property (nonatomic, strong) joiBook *theBook;
 
 +(id)sharedManager;
 -(joiBook*)selectBook:(NSUInteger)bookid;

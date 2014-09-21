@@ -16,17 +16,23 @@
 //		[[SKMusicPlayer musicPlayer] playWithMusicName:@"bg" musicType:@"mp3"];
 
 		theSize = size;
-		theModel = [[joiModel alloc] init];
 
-		NSLog(@">:>: %i", theModel.totalBooks);
-		for (int i = 0; i < (int) 5; i++) {
+//		joiMenuItem *mIs = [mC objectAtIndex:0];
+//		NSLog(@"ATLAS: %@", mIs);
+
+//		NSLog(@"...> %@", [super.theModel bookProperty:@"miAtlasName" withBookID:0]);
+
+		for (NSUInteger i = 0; i < self.totalBooks; i++) {
+
+			joiMenuItem *mC = [self.theModel bookProperty:@"menuItem" withBookID:i];
 
 			[self addChild: [[joiAnimButton alloc]
 									initWithSize:theSize
 										   named:[NSString stringWithFormat:@"levelButton_%d", i]
 										position:CGPointMake((CGFloat)
 														(i*160) + (35*i) + 7 + 35, theSize.height/2)
-									   fromAtlas:@"button"]];
+									   fromAtlas:[mC valueForKey:@"atlasName"]
+							 ]];
 		}
 	}
 	return self;

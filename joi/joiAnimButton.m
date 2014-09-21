@@ -73,7 +73,7 @@ static NSUInteger bookID = 0;
 	return self;
 }
 
--(void)selectBook:(NSUInteger*)selectedBookID
+-(void)selectBook:(NSUInteger)selectedBookID
 {
 	NSLog(@"clicked (inside)...");
 	return;

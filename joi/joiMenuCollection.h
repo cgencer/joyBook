@@ -13,6 +13,6 @@
 
 @interface joiMenuCollection : JSONModel
 
-@property (strong, nonatomic) NSArray<joiMenuItem, ConvertOnDemand>* menuItem;
+@property (strong, nonatomic) joiMenuItem *menuI;
 
 @end

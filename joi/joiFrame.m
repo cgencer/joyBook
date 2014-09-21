@@ -10,4 +10,6 @@
 
 @implementation joiFrame
 
+@synthesize image;
+
 @end

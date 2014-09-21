@@ -10,4 +10,6 @@
 
 @implementation joiMenuCollection
 
+@synthesize menuI;
+
 @end

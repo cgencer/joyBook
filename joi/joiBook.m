@@ -10,4 +10,12 @@
 
 @implementation joiBook
 
+@synthesize menuItem;
+@synthesize stage;
+@synthesize audio;
+@synthesize backPic;
+@synthesize backAnim;
+@synthesize actions;
+@synthesize orientation;
+
 @end

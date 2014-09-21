@@ -15,7 +15,7 @@
 @interface joiBook : JSONModel
 
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSArray<joiMenuCollection, ConvertOnDemand> *menuCollection;
+@property (strong, nonatomic) joiMenuItem *menuItem;
 @property (strong, nonatomic) NSString *stage;
 @property (strong, nonatomic) NSString<Optional>* audio;
 @property (strong, nonatomic) NSString<Optional>* backPic;

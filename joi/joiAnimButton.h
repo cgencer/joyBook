@@ -20,7 +20,7 @@
 		fromAtlas:(NSString*)atlas;
 
 +(NSUInteger) getBookID;
--(void)selectBook:(NSUInteger*)selectedBookID;
+-(void)selectBook:(NSUInteger)selectedBookID;
 -(void)animateButton;
 
 @end

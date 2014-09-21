@@ -15,8 +15,9 @@
 -(id)initWithSpriteImageName:(NSString*)name {
 
     if(self = [super init]) {
-//		theModel = [[joiModel alloc] init];
-//		NSLog(@"...%@", [theModel bookProperty:@"stage"]);
+		self.theModel = [[joiModel alloc] init];
+		self.totalBooks = self.theModel.totalBooks;
+		NSLog(@"total: %tu", self.totalBooks);
     }
     return self;
 }

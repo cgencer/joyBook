@@ -19,9 +19,10 @@
 //		theSize = CGSizeMake(size.height, size.width);
 		theSize = size;
 
-		theModel = [[joiModel alloc] init];
-		NSLog(@"...%@", [theModel bookProperty:@"title" withBookID:0]);
-		
+//		theModel = [[joiModel alloc] init];
+//		NSLog(@"...%@", [theModel bookProperty:@"title" withBookID:0]);
+//		NSLog(@"...%@", [theModel bookProperty:@"menuSet" withBookID:0]);
+
 		SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
 
 		myLabel.text = @"Hello, World!";

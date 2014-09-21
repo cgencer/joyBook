@@ -10,16 +10,9 @@
 
 @implementation joiMenuItem
 
+@synthesize atlasName;
 @synthesize interval;
 @synthesize pause;
-
-+(JSONKeyMapper*)keyMapper
-{
-  return [[JSONKeyMapper alloc] initWithDictionary:@{
-    @"menuItem.interval": @"interval",
-    @"menuItem.pause": @"pause",
-    @"menuItem.frames": @"frames",
-  }];
-}
+@synthesize frames;
 
 @end

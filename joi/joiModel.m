@@ -17,6 +17,7 @@
 @synthesize totalBooks;
 @synthesize activeBook;
 @synthesize activePage;
+@synthesize theBook;
 
 #pragma mark Singleton Methods
 
@@ -56,34 +57,20 @@
 	if(err) {
 		NSLog(@"ERROR while initialising the bookset from collection: %@", coll);
 	}else{
-		book = coll.book;
+		books = coll.books;
+		totalBooks = [books count];
+		theBook = books[(bookID ? bookID : activeBook)];
 
-		totalBooks = [book count];
-//		bookID = (bookID < totalBooks) ? bookID : defaultBookNum;
-//		NSLog(@"book initialized... %tu", bookID);
-
-		theBook = book[0];
-		
 		if(theBook == nil) {
 			NSLog(@"error on theBook");
 		}
-		NSLog(@"book initialized... %i %@", totalBooks, book);
 	}
 	return theBook;
 }
 
 -(id)bookProperty:(NSString *)selector withBookID:(NSUInteger)bookID
 {
-NSLog(@"BID: %i", bookID);
-	theBook = [self selectBook:bookID];
-
-	return [theBook valueForKey:selector];
-
-//	NSString* path = [[NSString alloc] initWithFormat:@"%@", prop];
-//	NSString* imgPath = [[NSBundle mainBundle] pathForResource:path ofType:@"png"];
-
-//	UIImage* image = [UIImage imageWithContentsOfFile:imgPath];
-//	UIImageView *imgView = [[UIImageView alloc] initWithImage:image];
+	return [[self selectBook:bookID] valueForKey:selector];
 }
 
 - (void)dealloc {

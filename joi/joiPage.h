@@ -11,10 +11,13 @@
 #import "joiBook.h"
 
 @interface joiPage : SKSpriteNode {
-	joiModel* theModel;
 }
 
 @property (nonatomic) joiBook* theBook;
+@property (nonatomic) joiModel* theModel;
+@property (nonatomic, assign) NSUInteger totalBooks;
+@property (nonatomic, assign) NSUInteger activeBook;
+@property (nonatomic, assign) NSUInteger activePage;
 
 -(id)initWithSpriteImageName:(NSString*)name;
 

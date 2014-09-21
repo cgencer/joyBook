@@ -13,8 +13,9 @@
 
 @interface joiMenuItem : JSONModel
 
+@property (strong, nonatomic) NSString *atlasName;
 @property (assign, nonatomic) NSNumber<Optional> *interval;
 @property (assign, nonatomic) NSNumber<Optional> *pause;
-@property (strong, nonatomic) NSArray<joiFrame, Optional>* frames;
+@property (strong, nonatomic) NSArray<joiFrame> *frames;
 
 @end
