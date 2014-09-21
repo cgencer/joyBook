@@ -54,7 +54,116 @@
 				"audio": "ses.caf"
 			}
 		]
+	},
+	{
+		"title": "test ismi",
+		"orientation": "LANDSCAPE",
+		"menuItem": {
+			"atlasName": "button",
+			"interval": 20,
+			"pause": 1000,
+			"frameSeq": {
+				"imageName": "dove%i",
+				"number": 6
+			}
+		},
+		"stage": "stage",
+		"audio": "",
+		"backPic": "back",
+		"backAnim": {
+			"name": "backAnimation",
+			"posStart": {
+			   "x": 0,
+			   "y": 0
+			},
+			"chained": false,
+			"type": "LOOP",
+			"tween": "FRAME",
+			"interval": 20,
+			"frameSeq": {
+				"imageName": "dove%i",
+				"number": 7
+			}
+		},
+		"actions": [
+			{
+				"name": "My Animation 1",
+				"type": "TOUCH",
+				"tween": "LINEAR",
+				"chained": false,
+				"next": "NONE",
+				"pauseBegin": 4500,
+				"pauseEnd": 4500,
+				"posStart": {
+					"x": 100,
+					"y": 50
+				},
+				"posEnd": {
+					"x": 100,
+					"y": 50
+				},
+				"frameSeq": {
+					"imageName": "kelle%i",
+					"number": 6
+				},
+				"audio": "ses.caf"
+			}
+		]
+	},
+	{
+		"title": "test ismi",
+		"orientation": "LANDSCAPE",
+		"menuItem": {
+			"atlasName": "button",
+			"interval": 20,
+			"pause": 1000,
+			"frameSeq": {
+				"imageName": "dove%i",
+				"number": 6
+			}
+		},
+		"stage": "stage",
+		"audio": "",
+		"backPic": "back",
+		"backAnim": {
+			"name": "backAnimation",
+			"posStart": {
+			   "x": 0,
+			   "y": 0
+			},
+			"chained": false,
+			"type": "LOOP",
+			"tween": "FRAME",
+			"interval": 20,
+			"frameSeq": {
+				"imageName": "dove%i",
+				"number": 7
+			}
+		},
+		"actions": [
+			{
+				"name": "My Animation 1",
+				"type": "TOUCH",
+				"tween": "LINEAR",
+				"chained": false,
+				"next": "NONE",
+				"pauseBegin": 4500,
+				"pauseEnd": 4500,
+				"posStart": {
+					"x": 100,
+					"y": 50
+				},
+				"posEnd": {
+					"x": 100,
+					"y": 50
+				},
+				"frameSeq": {
+					"imageName": "kelle%i",
+					"number": 6
+				},
+				"audio": "ses.caf"
+			}
+		]
 	}
-
 	]
 }

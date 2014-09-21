@@ -11,7 +11,8 @@
 static NSUInteger bookID = 0;
 
 @implementation joiAnimButton {
-	SKSpriteButtonNode *theButton;
+	SKSpriteButtonNode *storyButton;
+	SKSpriteButtonNode *gameButton;
 	SKSpriteNode *theAnim;
 	NSString *theName;
 	NSArray *theFrames;
@@ -35,30 +36,45 @@ static NSUInteger bookID = 0;
 		_atlas = atlas;
 		bookID++;
 
-		NSLog(@"PATTERN: %@", pattern);
-		
-//		[self addChild: [self doButton:@"button" withFrameName:@"frame"]];
-
 		SKTextureAtlas *bAtlas = [SKTextureAtlas atlasNamed:_atlas];
 		
-		theButton = [SKSpriteButtonNode
+		storyButton = [SKSpriteButtonNode
 					 buttonNodeWithNormalTexture:[bAtlas textureNamed:@"button-off"]
 					 highlightedTexture:[bAtlas textureNamed:@"button-on"]
 					 block:^(id buttonNode, BOOL highlighted) {
-						[self selectBook:bookID];
+						 if (!highlighted) {
+							 NSLog(@"clicked!");
+							 [self selectBook:bookID];
+						 }
 					 }];
-		theButton.name = theName;
-		theButton.zPosition = 10;
-		theButton.position = pos;
-		theButton.anchorPoint = CGPointMake(0, 0);
-		[self addChild:theButton];
+		storyButton.name = theName;
+		storyButton.zPosition = 10;
+		storyButton.position = pos;
+		storyButton.anchorPoint = CGPointMake(0, 0);
+		[self addChild:storyButton];
+		CGRect layerSize = [storyButton calculateAccumulatedFrame];
+
+		gameButton = [SKSpriteButtonNode
+					   buttonNodeWithNormalTexture:[bAtlas textureNamed:@"button-off"]
+					   highlightedTexture:[bAtlas textureNamed:@"button-on"]
+					   block:^(id buttonNode, BOOL highlighted) {
+						   if (!highlighted) {
+							   NSLog(@"clicked!");
+							   [self selectBook:bookID];
+						   }
+					   }];
+		gameButton.name = theName;
+		gameButton.zPosition = 10;
+		gameButton.position = CGPointMake(pos.x, pos.y - layerSize.size.height - 35);
+		gameButton.anchorPoint = CGPointMake(0, 0);
+		[self addChild:gameButton];
 
 		NSMutableArray *_theFrames = [NSMutableArray array];
 
-		for (NSUInteger i = 0; i < frameNo-1; i++) {
-			[_theFrames addObject:
-							[bAtlas textureNamed:
-										[NSString stringWithFormat:pattern, i]]];
+		for (NSUInteger i = 1; i <= frameNo; i++) {
+			NSString *namedText = [NSString stringWithFormat:pattern, i];
+			NSLog(@"texture name: %@", namedText);
+			[_theFrames addObject:[bAtlas textureNamed:namedText]];
 		}
 		SKTexture *temp = _theFrames[0];
 		theFrames = _theFrames;

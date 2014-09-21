@@ -17,23 +17,34 @@
 
 		theSize = size;
 		
-		for (NSUInteger i = 0; i < self.totalBooks; i++) {
+		for (NSUInteger i = 0; i < 5; i++) {
 
-			joiMenuItem *mItem = [self.theModel bookProperty:@"menuItem" withBookID:i];
-//			joiFrame *frm = [mItem valueForKey:@"frameSeq"];
-//			NSLog(@">>>>>>>> %@", frm);
+			NSString *atlasName;
+			NSUInteger frameNum;
+			BOOL reality;
+
+			if (i+1 > self.totalBooks) {
+				atlasName = @"blankLevels";
+				frameNum = 1;
+			}else{
+				atlasName = [[self.theModel bookProperty:@"menuItem" withBookID:i] valueForKey:@"atlasName"];
+				frameNum = 7;
+			}
+			NSLog(@"%@", atlasName);
 			CGFloat xx = (CGFloat) (i*160) + (35*i) + 7 + 35;
 			CGFloat yy = (CGFloat) theSize.height/2;
-			NSLog(@"%@: atlas: %@",[self class], [mItem valueForKey:@"atlasName"]);
+
 			[self addChild: [[joiAnimButton alloc]
 									initWithSize:theSize
-										   named:[NSString stringWithFormat:@"levelButton_%d", i]
+										   named:[NSString stringWithFormat:@"levelButton_%i", i]
 										position:CGPointMake(xx, yy)
-									   fromAtlas:[mItem valueForKey:@"atlasName"]
-								withFramePattern:@"dove%i"
-									   andFrames:7
+									   fromAtlas:atlasName
+								withFramePattern:@"frame%i"
+									   andFrames:frameNum
 							 ]];
 		}
+
+
 	}
 	return self;
 }

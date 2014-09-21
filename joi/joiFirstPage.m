@@ -15,13 +15,8 @@
 
 -(id)initWithSize:(CGSize)size {
     if(self = [super initWithSpriteImageName:@"aPage"]) {
-		// flipping width <-> height due orientation
-//		theSize = CGSizeMake(size.height, size.width);
-		theSize = size;
 
-//		theModel = [[joiModel alloc] init];
-//		NSLog(@"...%@", [theModel bookProperty:@"title" withBookID:0]);
-//		NSLog(@"...%@", [theModel bookProperty:@"menuSet" withBookID:0]);
+		theSize = size;
 
 		SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
 

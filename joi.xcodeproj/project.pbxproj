@@ -20,6 +20,7 @@
 		140C59FA19B9B3D800170ED3 /* joiSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C59F919B9B3D800170ED3 /* joiSocial.m */; };
 		140C5A0719BD00C200170ED3 /* joiPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C5A0619BD00C200170ED3 /* joiPage.m */; };
 		140E4C1419B45AEF00E2ED4E /* DMLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */; };
+		1485A54F19CF469A001888FB /* blankLevels.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1485A54E19CF469A001888FB /* blankLevels.atlas */; };
 		148FC50719BD8A3A0064EB80 /* PBParallaxScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 148FC50619BD8A3A0064EB80 /* PBParallaxScrolling.m */; };
 		148FC50B19BD900C0064EB80 /* joiFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 148FC50A19BD900C0064EB80 /* joiFirstPage.m */; };
 		148FC50E19BDA74A0064EB80 /* joiHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 148FC50D19BDA74A0064EB80 /* joiHUD.m */; };
@@ -89,6 +90,7 @@
 		140E4C2119B4FD4C00E2ED4E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		140E4C2319B4FD5F00E2ED4E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		140E4C2819B5038700E2ED4E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../SDK/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		1485A54E19CF469A001888FB /* blankLevels.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = blankLevels.atlas; sourceTree = "<group>"; };
 		148FC50519BD8A3A0064EB80 /* PBParallaxScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBParallaxScrolling.h; sourceTree = "<group>"; };
 		148FC50619BD8A3A0064EB80 /* PBParallaxScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBParallaxScrolling.m; sourceTree = "<group>"; };
 		148FC50919BD900C0064EB80 /* joiFirstPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiFirstPage.h; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				148FC52319BDB9D30064EB80 /* bookOne.bundle */,
 				140C59EF19B87D5500170ED3 /* Main.storyboard */,
 				14C35B0D19CB020300C177AB /* ScrollView.storyboard */,
+				1485A54E19CF469A001888FB /* blankLevels.atlas */,
 				14F5AEEA19C6107E000BADF9 /* button.atlas */,
 				140C599B19B853E500170ED3 /* dove.atlas */,
 				140C599219B79E4000170ED3 /* back.png */,
@@ -419,6 +422,7 @@
 				14B6916319AB62D600C8B6E0 /* InfoPlist.strings in Resources */,
 				140C599419B79E4000170ED3 /* back.png in Resources */,
 				14F5AEEB19C6107E000BADF9 /* button.atlas in Resources */,
+				1485A54F19CF469A001888FB /* blankLevels.atlas in Resources */,
 				14CC4C2319C03E8D00E188C8 /* backbutton.png in Resources */,
 				14AF045119B5DC04005B9495 /* set.json in Resources */,
 				14F5AEDB19C3026F000BADF9 /* README.md in Resources */,
