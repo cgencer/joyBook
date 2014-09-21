@@ -11,9 +11,10 @@
 static NSUInteger bookID = 0;
 
 @implementation joiAnimButton {
-	SKSpriteNode *theButton;
+	SKSpriteButtonNode *theButton;
+	SKSpriteNode *theAnim;
 	NSString *theName;
-	NSMutableArray *theFrames;
+	NSArray *theFrames;
 	CGSize theSize;
 	NSString *_atlas;
 }
@@ -25,6 +26,8 @@ static NSUInteger bookID = 0;
             named:(NSString*)name
 		 position:(CGPoint)pos
 	    fromAtlas:(NSString*)atlas
+ withFramePattern:(NSString*)pattern
+		andFrames:(NSUInteger)frameNo
 {
 	if(self = [super init]) {
 		theSize = size;
@@ -32,6 +35,8 @@ static NSUInteger bookID = 0;
 		_atlas = atlas;
 		bookID++;
 
+		NSLog(@"PATTERN: %@", pattern);
+		
 //		[self addChild: [self doButton:@"button" withFrameName:@"frame"]];
 
 		SKTextureAtlas *bAtlas = [SKTextureAtlas atlasNamed:_atlas];
@@ -40,48 +45,46 @@ static NSUInteger bookID = 0;
 					 buttonNodeWithNormalTexture:[bAtlas textureNamed:@"button-off"]
 					 highlightedTexture:[bAtlas textureNamed:@"button-on"]
 					 block:^(id buttonNode, BOOL highlighted) {
-							 [self selectBook:bookID];
-							 NSDictionary *dict = [NSDictionary dictionaryWithObject:@"Ravi" 
-							 												 forKey:@"name"];
-							 [[NSNotificationCenter defaultCenter] postNotificationName:@"levelSelected"
-                    							                                 object:nil
-                                        					          		   userInfo:dict];
+						[self selectBook:bookID];
 					 }];
 		theButton.name = theName;
 		theButton.zPosition = 10;
 		theButton.position = pos;
 		theButton.anchorPoint = CGPointMake(0, 0);
 		[self addChild:theButton];
-/*
-		SKTexture *temp;
-		int numImages = bAtlas.textureNames.count / 5;	// because there are x5 of each image in the atlas
-		for (int i = 0; i <= numImages-2; i++) {			// -2: to exclude the still frames -on and -off
-			NSString *textureName = [NSString stringWithFormat:@"frame%d", i];
-			SKTexture *temp = [bAtlas textureNamed:textureName];
-			NSLog(@"> %@ : %@", theName, temp);
-			[theFrames addObject:temp];
+
+		NSMutableArray *_theFrames = [NSMutableArray array];
+
+		for (NSUInteger i = 0; i < frameNo-1; i++) {
+			[_theFrames addObject:
+							[bAtlas textureNamed:
+										[NSString stringWithFormat:pattern, i]]];
 		}
-		temp = theFrames[0];
-		theButton = [SKSpriteNode spriteNodeWithTexture:temp];
-		theButton.zPosition = 9;
-		theButton.position = pos;
-		theButton.anchorPoint = CGPointMake(0, 0);
-		[self addChild:theButton];
-//		[self animateButton];
-*/
+		SKTexture *temp = _theFrames[0];
+		theFrames = _theFrames;
+		theAnim = [SKSpriteNode spriteNodeWithTexture:temp];
+		theAnim.zPosition = 12;
+		theAnim.position = pos;
+		theAnim.anchorPoint = CGPointMake(0, 0);
+		[self addChild:theAnim];
+		[self playAnim];
+
 	}
 	return self;
 }
 
 -(void)selectBook:(NSUInteger)selectedBookID
 {
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"levelSelected"
+														object:nil
+													  userInfo:nil];
 	NSLog(@"clicked (inside)...");
 	return;
 }
 
--(void)animateButton
+-(void)playAnim
 {
-	[theButton runAction:[SKAction repeatActionForever:
+	[theAnim runAction:[SKAction repeatActionForever:
 								[SKAction animateWithTextures:theFrames
 												 timePerFrame:0.1f
 													   resize:NO

@@ -10,7 +10,8 @@
 
 @implementation joiFrame
 
-@synthesize image;
+@synthesize imageName;
 @synthesize pause;
+@synthesize number;
 
 @end

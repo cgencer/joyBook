@@ -11,8 +11,8 @@
 @implementation joiMenuItem
 
 @synthesize atlasName;
+@synthesize frameSeq;
 @synthesize interval;
 @synthesize pause;
-@synthesize frames;
 
 @end

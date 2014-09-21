@@ -24,5 +24,4 @@
 +(id)sharedManager;
 -(joiBook*)selectBook:(NSUInteger)bookid;
 -(id)bookProperty:(NSString *)selector withBookID:(NSUInteger)bookID;
-
 @end

@@ -23,7 +23,7 @@
 @property (assign, nonatomic) NSNumber<Optional, ConvertOnDemand>* pauseEnd;
 @property (strong, nonatomic) joiLocation *posStart;
 @property (strong, nonatomic) joiLocation<Optional> *posEnd;
-@property (strong, nonatomic) NSArray<joiFrame, ConvertOnDemand>* frames;
+@property (strong, nonatomic) joiFrame *frameSeq;
 @property (assign, nonatomic) NSNumber<Optional, ConvertOnDemand>* interval;
 @property (strong, nonatomic) NSString<Optional> *audio;
 @property (strong, nonatomic) NSString<Optional> *video;	// transparent background video

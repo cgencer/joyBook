@@ -8,6 +8,8 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "Spritekit-Helper.h"
+#import "joiFrame.h"
+#import "joiMenuItem.h"
 
 @interface joiAnimButton : SKSpriteNode
 
@@ -17,10 +19,12 @@
 -(id)initWithSize:(CGSize)size
 			named:(NSString*)name
 		 position:(CGPoint)pos
-		fromAtlas:(NSString*)atlas;
+		fromAtlas:(NSString*)atlas
+ withFramePattern:(NSString*)pattern
+		andFrames:(NSUInteger)frameNo;
 
 +(NSUInteger) getBookID;
 -(void)selectBook:(NSUInteger)selectedBookID;
--(void)animateButton;
+-(void)playAnim;
 
 @end

@@ -7,121 +7,10 @@
 			"atlasName": "button",
 			"interval": 20,
 			"pause": 1000,
-			"frames": [
-				{
-					"image": "dove1"
-				}, {
-					"image": "dove2"
-				}, {
-					"image": "dove3"
-				}, {
-					"image": "dove4"
-				}, {
-					"image": "dove5"
-				}, {
-					"image": "dove6"
-				}, {
-					"image": "dove7"
-				}
-			]
-		},
-		"stage": "stage",
-		"audio": "",
-		"backPic": "back",
-		"backAnim": {
-			"name": "backAnimation",
-			"posStart": {
-			   "x": 0,
-			   "y": 0
-			},
-			"chained": false,
-			"type": "LOOP",
-			"tween": "FRAME",
-			"interval": 20,
-			"frames": [
-				{
-					"image": "dove1"
-				}, {
-					"image": "dove2"
-				}, {
-					"image": "dove3"
-				}, {
-					"image": "dove4"
-				}, {
-					"image": "dove5"
-				}, {
-					"image": "dove6"
-				}, {
-					"image": "dove7"
-				}
-			]
-		},
-		"actions": [
-			{
-				"name": "My Animation 1",
-				"type": "TOUCH",
-				"tween": "LINEAR",
-				"chained": false,
-				"next": "NONE",
-				"pauseBegin": 4500,
-				"pauseEnd": 4500,
-				"posStart": {
-					"x": 100,
-					"y": 50
-				},
-				"posEnd": {
-					"x": 100,
-					"y": 50
-				},
-				"frames": [
-					{
-						"image": "kelle1.png",
-						"pause": 12
-					}, {
-						"image": "kelle2.png",
-						"pause": 12
-					}, {
-						"image": "kelle3.png",
-						"pause": 20
-					}, {
-						"image": "kelle4.png",
-						"pause": 20
-					}, {
-						"image": "kelle5.png",
-						"pause": 12
-					}, {
-						"image": "kelle6.png",
-						"pause": 12
-					}
-				],
-				"audio": "ses.caf"
+			"frameSeq": {
+				"imageName": "dove%i",
+				"number": 6
 			}
-		]
-	},
-	{
-		"title": "test ismi",
-		"orientation": "LANDSCAPE",
-		"menuItem": {
-			"atlasName": "button",
-			"interval": 20,
-			"pause": 1000,
-			"frames": [
-				{
-					"image": "dove1"
-				}, {
-					"image": "dove2"
-				}, {
-					"image": "dove3"
-				}, {
-					"image": "dove4"
-				}, {
-					"image": "dove5"
-				}, {
-					"image": "dove6"
-				}, {
-					"image": "dove7"
-				}
-			]
 		},
 		"stage": "stage",
 		"audio": "",
@@ -136,23 +25,10 @@
 			"type": "LOOP",
 			"tween": "FRAME",
 			"interval": 20,
-			"frames": [
-				{
-					"image": "dove1"
-				}, {
-					"image": "dove2"
-				}, {
-					"image": "dove3"
-				}, {
-					"image": "dove4"
-				}, {
-					"image": "dove5"
-				}, {
-					"image": "dove6"
-				}, {
-					"image": "dove7"
-				}
-			]
+			"frameSeq": {
+				"imageName": "dove%i",
+				"number": 7
+			}
 		},
 		"actions": [
 			{
@@ -171,30 +47,14 @@
 					"x": 100,
 					"y": 50
 				},
-				"frames": [
-					{
-						"image": "kelle1.png",
-						"pause": 12
-					}, {
-						"image": "kelle2.png",
-						"pause": 12
-					}, {
-						"image": "kelle3.png",
-						"pause": 20
-					}, {
-						"image": "kelle4.png",
-						"pause": 20
-					}, {
-						"image": "kelle5.png",
-						"pause": 12
-					}, {
-						"image": "kelle6.png",
-						"pause": 12
-					}
-				],
+				"frameSeq": {
+					"imageName": "kelle%i",
+					"number": 6
+				},
 				"audio": "ses.caf"
 			}
 		]
 	}
+
 	]
 }

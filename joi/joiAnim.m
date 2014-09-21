@@ -19,7 +19,7 @@
 @synthesize pauseEnd;
 @synthesize posStart;
 @synthesize posEnd;
-@synthesize frames;
+@synthesize frameSeq;
 @synthesize interval;
 @synthesize audio;
 @synthesize video;
