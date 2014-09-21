@@ -1,6 +1,8 @@
 {
-	"books": [{
+	"books": [
+	{
 		"title": "test ismi",
+		"orientation": "LANDSCAPE",
 		"menuItem": {
 			"atlasName": "button",
 			"interval": 20,
@@ -26,48 +28,48 @@
 		"stage": "stage",
 		"audio": "",
 		"backPic": "back",
-		"backAnim": [
-			{
-				"location": {
-				   "x": 0,
-				   "y": 0
-				},
-				"type": "LOOP",
-				"tween": "FRAME",
-				"interval": 20,
-				"frames": [
-					{
-						"image": "dove1"
-					}, {
-						"image": "dove2"
-					}, {
-						"image": "dove3"
-					}, {
-						"image": "dove4"
-					}, {
-						"image": "dove5"
-					}, {
-						"image": "dove6"
-					}, {
-						"image": "dove7"
-					}
-				]
-			}
-		],
+		"backAnim": {
+			"name": "backAnimation",
+			"posStart": {
+			   "x": 0,
+			   "y": 0
+			},
+			"chained": false,
+			"type": "LOOP",
+			"tween": "FRAME",
+			"interval": 20,
+			"frames": [
+				{
+					"image": "dove1"
+				}, {
+					"image": "dove2"
+				}, {
+					"image": "dove3"
+				}, {
+					"image": "dove4"
+				}, {
+					"image": "dove5"
+				}, {
+					"image": "dove6"
+				}, {
+					"image": "dove7"
+				}
+			]
+		},
 		"actions": [
 			{
-				"name": "any name",
+				"name": "My Animation 1",
 				"type": "TOUCH",
 				"tween": "LINEAR",
 				"chained": false,
 				"next": "NONE",
 				"pauseBegin": 4500,
 				"pauseEnd": 4500,
-				"startpos": {
+				"posStart": {
 					"x": 100,
 					"y": 50
 				},
-				"endpos": {
+				"posEnd": {
 					"x": 100,
 					"y": 50
 				},
@@ -94,10 +96,11 @@
 				],
 				"audio": "ses.caf"
 			}
-		],
-		"orientation": "LANDSCAPE"
-	}, {
+		]
+	},
+	{
 		"title": "test ismi",
+		"orientation": "LANDSCAPE",
 		"menuItem": {
 			"atlasName": "button",
 			"interval": 20,
@@ -123,48 +126,48 @@
 		"stage": "stage",
 		"audio": "",
 		"backPic": "back",
-		"backAnim": [
-			{
-				"location": {
-				   "x": 0,
-				   "y": 0
-				},
-				"type": "LOOP",
-				"tween": "FRAME",
-				"interval": 20,
-				"frames": [
-					{
-						"image": "dove1"
-					}, {
-						"image": "dove2"
-					}, {
-						"image": "dove3"
-					}, {
-						"image": "dove4"
-					}, {
-						"image": "dove5"
-					}, {
-						"image": "dove6"
-					}, {
-						"image": "dove7"
-					}
-				]
-			}
-		],
+		"backAnim": {
+			"name": "backAnimation",
+			"posStart": {
+			   "x": 0,
+			   "y": 0
+			},
+			"chained": false,
+			"type": "LOOP",
+			"tween": "FRAME",
+			"interval": 20,
+			"frames": [
+				{
+					"image": "dove1"
+				}, {
+					"image": "dove2"
+				}, {
+					"image": "dove3"
+				}, {
+					"image": "dove4"
+				}, {
+					"image": "dove5"
+				}, {
+					"image": "dove6"
+				}, {
+					"image": "dove7"
+				}
+			]
+		},
 		"actions": [
 			{
-				"name": "any name",
+				"name": "My Animation 1",
 				"type": "TOUCH",
 				"tween": "LINEAR",
 				"chained": false,
 				"next": "NONE",
 				"pauseBegin": 4500,
 				"pauseEnd": 4500,
-				"startpos": {
+				"posStart": {
 					"x": 100,
 					"y": 50
 				},
-				"endpos": {
+				"posEnd": {
 					"x": 100,
 					"y": 50
 				},
@@ -191,8 +194,7 @@
 				],
 				"audio": "ses.caf"
 			}
-		],
-		"orientation": "LANDSCAPE"
+		]
 	}
 	]
 }

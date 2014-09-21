@@ -10,4 +10,18 @@
 
 @implementation joiAnim
 
+@synthesize name;
+@synthesize type;
+@synthesize tween;
+@synthesize chained;
+@synthesize next;
+@synthesize pauseBegin;
+@synthesize pauseEnd;
+@synthesize posStart;
+@synthesize posEnd;
+@synthesize frames;
+@synthesize interval;
+@synthesize audio;
+@synthesize video;
+
 @end

@@ -21,8 +21,8 @@
 @property (strong, nonatomic) NSString<Optional> *next;			// NONE or named anim
 @property (assign, nonatomic) NSNumber<Optional, ConvertOnDemand>* pauseBegin;
 @property (assign, nonatomic) NSNumber<Optional, ConvertOnDemand>* pauseEnd;
-@property (strong, nonatomic) NSArray<joiLocation, ConvertOnDemand>* startPos;
-@property (strong, nonatomic) NSObject<joiLocation, Optional, ConvertOnDemand> *endPos;
+@property (strong, nonatomic) joiLocation *posStart;
+@property (strong, nonatomic) joiLocation<Optional> *posEnd;
 @property (strong, nonatomic) NSArray<joiFrame, ConvertOnDemand>* frames;
 @property (assign, nonatomic) NSNumber<Optional, ConvertOnDemand>* interval;
 @property (strong, nonatomic) NSString<Optional> *audio;

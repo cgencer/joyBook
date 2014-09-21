@@ -12,7 +12,7 @@
 
 @interface joiLocation : JSONModel
 
-@property (strong, nonatomic) NSNumber *posX;
-@property (strong, nonatomic) NSNumber *posY;
+@property (strong, nonatomic) NSNumber *x;
+@property (strong, nonatomic) NSNumber *y;
 
 @end

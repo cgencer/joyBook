@@ -17,15 +17,10 @@
 
 		theSize = size;
 
-//		joiMenuItem *mIs = [mC objectAtIndex:0];
-//		NSLog(@"ATLAS: %@", mIs);
-
-//		NSLog(@"...> %@", [super.theModel bookProperty:@"miAtlasName" withBookID:0]);
-
 		for (NSUInteger i = 0; i < self.totalBooks; i++) {
 
 			joiMenuItem *mC = [self.theModel bookProperty:@"menuItem" withBookID:i];
-
+			NSLog(@"%@: atlas: %@",[self class], [mC valueForKey:@"atlasName"]);
 			[self addChild: [[joiAnimButton alloc]
 									initWithSize:theSize
 										   named:[NSString stringWithFormat:@"levelButton_%d", i]

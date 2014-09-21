@@ -14,7 +14,7 @@
 {
   return [[JSONKeyMapper alloc] initWithDictionary:@{
     @"location.x": @"locX",
-    @"location.y.usd": @"locY"
+    @"location.y": @"locY"
   }];
 }
 

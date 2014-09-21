@@ -11,5 +11,6 @@
 @implementation joiFrame
 
 @synthesize image;
+@synthesize pause;
 
 @end

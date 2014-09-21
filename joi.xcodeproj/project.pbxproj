@@ -20,7 +20,6 @@
 		140C59FA19B9B3D800170ED3 /* joiSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C59F919B9B3D800170ED3 /* joiSocial.m */; };
 		140C5A0719BD00C200170ED3 /* joiPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C5A0619BD00C200170ED3 /* joiPage.m */; };
 		140E4C1419B45AEF00E2ED4E /* DMLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */; };
-		144E22F819CDB4BE00E2E2AD /* joiMenuCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 144E22F719CDB4BE00E2E2AD /* joiMenuCollection.m */; };
 		148FC50719BD8A3A0064EB80 /* PBParallaxScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 148FC50619BD8A3A0064EB80 /* PBParallaxScrolling.m */; };
 		148FC50B19BD900C0064EB80 /* joiFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 148FC50A19BD900C0064EB80 /* joiFirstPage.m */; };
 		148FC50E19BDA74A0064EB80 /* joiHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 148FC50D19BDA74A0064EB80 /* joiHUD.m */; };
@@ -90,8 +89,6 @@
 		140E4C2119B4FD4C00E2ED4E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		140E4C2319B4FD5F00E2ED4E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		140E4C2819B5038700E2ED4E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../SDK/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		144E22F619CDB4BE00E2E2AD /* joiMenuCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiMenuCollection.h; sourceTree = "<group>"; };
-		144E22F719CDB4BE00E2E2AD /* joiMenuCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = joiMenuCollection.m; sourceTree = "<group>"; };
 		148FC50519BD8A3A0064EB80 /* PBParallaxScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBParallaxScrolling.h; sourceTree = "<group>"; };
 		148FC50619BD8A3A0064EB80 /* PBParallaxScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBParallaxScrolling.m; sourceTree = "<group>"; };
 		148FC50919BD900C0064EB80 /* joiFirstPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = joiFirstPage.h; sourceTree = "<group>"; };
@@ -209,8 +206,6 @@
 				14AF045019B5DC04005B9495 /* set.json */,
 				140C598719B6FEB200170ED3 /* joiLocation.h */,
 				140C598819B6FEB200170ED3 /* joiLocation.m */,
-				144E22F619CDB4BE00E2E2AD /* joiMenuCollection.h */,
-				144E22F719CDB4BE00E2E2AD /* joiMenuCollection.m */,
 				14CC4C1D19BEDCEB00E188C8 /* joiMenuItem.h */,
 				14CC4C1E19BEDCEB00E188C8 /* joiMenuItem.m */,
 				140C598A19B6FEF100170ED3 /* joiFrame.h */,
@@ -479,7 +474,6 @@
 				140C598C19B6FEF100170ED3 /* joiFrame.m in Sources */,
 				140C59FA19B9B3D800170ED3 /* joiSocial.m in Sources */,
 				14F5AED919C3026F000BADF9 /* DVScrollNode.m in Sources */,
-				144E22F819CDB4BE00E2E2AD /* joiMenuCollection.m in Sources */,
 				14CC4C2C19C1AF8300E188C8 /* joiCore.m in Sources */,
 				14F5AEDF19C3026F000BADF9 /* SKUMultiLineLabelNode.m in Sources */,
 				14CC4C1F19BEDCEB00E188C8 /* joiMenuItem.m in Sources */,
