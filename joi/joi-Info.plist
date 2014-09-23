@@ -41,6 +41,8 @@
 	<false/>
 	<key>UIMainStoryboardFile</key>
 	<string>ScrollView</string>
+	<key>UIMainStoryboardFile~ipad</key>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

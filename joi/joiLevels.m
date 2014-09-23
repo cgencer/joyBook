@@ -16,34 +16,39 @@
 //		[[SKMusicPlayer musicPlayer] playWithMusicName:@"bg" musicType:@"mp3"];
 
 		theSize = size;
+		NSString *prefix;
 		
-		for (NSUInteger i = 0; i < 5; i++) {
+		for (NSUInteger iy = 0; iy < 2; iy++) {
+		prefix = (iy == 0) ? @"story" : @"game";
+		for (NSUInteger ix = 0; ix < 5; ix++) {
 
 			NSString *atlasName;
 			NSUInteger frameNum;
-			BOOL reality;
 
-			if (i+1 > self.totalBooks) {
+			if (ix+1 > self.totalBooks) {
 				atlasName = @"blankLevels";
 				frameNum = 1;
 			}else{
-				atlasName = [[self.theModel bookProperty:@"menuItem" withBookID:i] valueForKey:@"atlasName"];
+				atlasName = [[self.theModel bookProperty:@"menuItem" withBookID:ix] valueForKey:@"atlasName"];
 				frameNum = 7;
 			}
-			NSLog(@"%@", atlasName);
-			CGFloat xx = (CGFloat) (i*160) + (35*i) + 7 + 35;
-			CGFloat yy = (CGFloat) theSize.height/2;
+			CGFloat xx = (CGFloat) (ix*160) + (35*ix) + 7 + 35;
+			CGFloat yy = (CGFloat) theSize.height/2 - iy*195;
 
-			[self addChild: [[joiAnimButton alloc]
-									initWithSize:theSize
-										   named:[NSString stringWithFormat:@"levelButton_%i", i]
-										position:CGPointMake(xx, yy)
-									   fromAtlas:atlasName
-								withFramePattern:@"frame%i"
-									   andFrames:frameNum
-							 ]];
+			joiAnimButton *aButton = [[joiAnimButton alloc]
+			 initWithSize:theSize
+			 named:[NSString stringWithFormat: @"%@Button_%i", prefix, ix]
+			 position:CGPointMake(xx, yy)
+			 fromAtlas:atlasName
+			 withFramePattern:@"frame%i"
+			 andFrames:frameNum
+			 andID:ix
+			 ];
+			[self addChild:aButton];
+			
 		}
-
+		}
+		self.zPosition = 1;
 
 	}
 	return self;

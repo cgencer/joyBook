@@ -17,6 +17,8 @@
 
 @implementation SKBButtonNode
 
+@synthesize normalTexture = _normalTexture;
+
 #pragma mark Texture Initializer
 
 /**

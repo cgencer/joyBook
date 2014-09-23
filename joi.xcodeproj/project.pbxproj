@@ -20,6 +20,10 @@
 		140C59FA19B9B3D800170ED3 /* joiSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C59F919B9B3D800170ED3 /* joiSocial.m */; };
 		140C5A0719BD00C200170ED3 /* joiPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C5A0619BD00C200170ED3 /* joiPage.m */; };
 		140E4C1419B45AEF00E2ED4E /* DMLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 140E4C1219B45AEF00E2ED4E /* DMLazyScrollView.m */; };
+		146BC79219D1BD6700ED7387 /* SKHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 146BC78A19D1BD6700ED7387 /* SKHelper.m */; };
+		146BC79319D1BD6700ED7387 /* SKMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 146BC78C19D1BD6700ED7387 /* SKMusicPlayer.m */; };
+		146BC79419D1BD6700ED7387 /* SKScene+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 146BC78E19D1BD6700ED7387 /* SKScene+Helper.m */; };
+		146BC79519D1BD6700ED7387 /* SKSpriteButtonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 146BC79019D1BD6700ED7387 /* SKSpriteButtonNode.m */; };
 		1485A54F19CF469A001888FB /* blankLevels.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1485A54E19CF469A001888FB /* blankLevels.atlas */; };
 		148FC50719BD8A3A0064EB80 /* PBParallaxScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 148FC50619BD8A3A0064EB80 /* PBParallaxScrolling.m */; };
 		148FC50B19BD900C0064EB80 /* joiFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 148FC50A19BD900C0064EB80 /* joiFirstPage.m */; };
@@ -90,6 +94,15 @@
 		140E4C2119B4FD4C00E2ED4E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		140E4C2319B4FD5F00E2ED4E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		140E4C2819B5038700E2ED4E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../SDK/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		146BC78919D1BD6700ED7387 /* SKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKHelper.h; sourceTree = "<group>"; };
+		146BC78A19D1BD6700ED7387 /* SKHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKHelper.m; sourceTree = "<group>"; };
+		146BC78B19D1BD6700ED7387 /* SKMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKMusicPlayer.h; sourceTree = "<group>"; };
+		146BC78C19D1BD6700ED7387 /* SKMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMusicPlayer.m; sourceTree = "<group>"; };
+		146BC78D19D1BD6700ED7387 /* SKScene+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKScene+Helper.h"; sourceTree = "<group>"; };
+		146BC78E19D1BD6700ED7387 /* SKScene+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKScene+Helper.m"; sourceTree = "<group>"; };
+		146BC78F19D1BD6700ED7387 /* SKSpriteButtonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSpriteButtonNode.h; sourceTree = "<group>"; };
+		146BC79019D1BD6700ED7387 /* SKSpriteButtonNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSpriteButtonNode.m; sourceTree = "<group>"; };
+		146BC79119D1BD6700ED7387 /* SpriteKit-Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SpriteKit-Helper.h"; sourceTree = "<group>"; };
 		1485A54E19CF469A001888FB /* blankLevels.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = blankLevels.atlas; sourceTree = "<group>"; };
 		148FC50519BD8A3A0064EB80 /* PBParallaxScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBParallaxScrolling.h; sourceTree = "<group>"; };
 		148FC50619BD8A3A0064EB80 /* PBParallaxScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBParallaxScrolling.m; sourceTree = "<group>"; };
@@ -180,9 +193,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		146BC78819D1BD6700ED7387 /* SpriteKit-Helper */ = {
+			isa = PBXGroup;
+			children = (
+				146BC78919D1BD6700ED7387 /* SKHelper.h */,
+				146BC78A19D1BD6700ED7387 /* SKHelper.m */,
+				146BC78B19D1BD6700ED7387 /* SKMusicPlayer.h */,
+				146BC78C19D1BD6700ED7387 /* SKMusicPlayer.m */,
+				146BC78D19D1BD6700ED7387 /* SKScene+Helper.h */,
+				146BC78E19D1BD6700ED7387 /* SKScene+Helper.m */,
+				146BC78F19D1BD6700ED7387 /* SKSpriteButtonNode.h */,
+				146BC79019D1BD6700ED7387 /* SKSpriteButtonNode.m */,
+				146BC79119D1BD6700ED7387 /* SpriteKit-Helper.h */,
+			);
+			path = "SpriteKit-Helper";
+			sourceTree = "<group>";
+		};
 		148FC50819BD8A6A0064EB80 /* external */ = {
 			isa = PBXGroup;
 			children = (
+				146BC78819D1BD6700ED7387 /* SpriteKit-Helper */,
 				14F5AECB19C3024D000BADF9 /* SKAdditions */,
 				148FC50519BD8A3A0064EB80 /* PBParallaxScrolling.h */,
 				148FC50619BD8A3A0064EB80 /* PBParallaxScrolling.m */,
@@ -471,11 +501,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B6916F19AB62D600C8B6E0 /* joiViewController.m in Sources */,
+				146BC79219D1BD6700ED7387 /* SKHelper.m in Sources */,
+				146BC79519D1BD6700ED7387 /* SKSpriteButtonNode.m in Sources */,
 				14AF045D19B5ED3E005B9495 /* joiAnim.m in Sources */,
 				14F60C4A19BE50300008E019 /* joiAnimButton.m in Sources */,
 				14C35AF619CA27E300C177AB /* joiIntro.m in Sources */,
 				140C5A0719BD00C200170ED3 /* joiPage.m in Sources */,
+				146BC79319D1BD6700ED7387 /* SKMusicPlayer.m in Sources */,
 				140C598C19B6FEF100170ED3 /* joiFrame.m in Sources */,
+				146BC79419D1BD6700ED7387 /* SKScene+Helper.m in Sources */,
 				140C59FA19B9B3D800170ED3 /* joiSocial.m in Sources */,
 				14F5AED919C3026F000BADF9 /* DVScrollNode.m in Sources */,
 				14CC4C2C19C1AF8300E188C8 /* joiCore.m in Sources */,

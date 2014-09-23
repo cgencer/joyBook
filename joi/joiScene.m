@@ -56,17 +56,18 @@
 		[_layerEntrance addChild:levelSelectionPage];
 //		levelSelectionPage.position = CGPointMake(0, size.height);
 
-		joiPage *aPage = [[joiFirstPage alloc] initWithSize:size];
+//		joiPage *aPage = [[joiFirstPage alloc] initWithSize:size];
 //		[_layerForeground addChild:aPage];
 
-		joiPage *hudPage = [[joiHUD alloc] initWithSize:size];
+//		joiPage *hudPage = [[joiHUD alloc] initWithSize:size];
 //		[_layerHUD addChild:hudPage];
 
+/*
 		[[NSNotificationCenter defaultCenter] addObserver:self
     		                                     selector:@selector(thingHappened:)
             		                                 name:@"levelSelected"
                     		                       object:nil];
-	}
+*/	}
 	return self;
 }
 
